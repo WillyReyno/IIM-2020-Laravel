@@ -1,4 +1,4 @@
-<?php include('../includes/header.php'); ?>
+<?php include('includes/header.php'); ?>
 
 <div class="blog-header">
     <h1 class="blog-title">Laravel - Jour 4</h1>
@@ -67,7 +67,7 @@
 
     </div><!-- /.blog-main -->
 
-    <?php include('../includes/sidebar.php'); ?>
+    <?php include('includes/sidebar.php'); ?>
 
 </div><!-- /.row -->
 

@@ -207,3 +207,15 @@ h6, .h6 {
 .blog-footer p:last-child {
   margin-bottom: 0;
 }
+
+.blog-sidebar.affix-top {
+  position: static;
+  margin-top:30px;
+  width:228px;
+}
+
+.blog-sidebar.affix {
+  position: fixed;
+  top:70px;
+  width:228px;
+}

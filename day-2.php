@@ -1,7 +1,7 @@
-<?php include('../includes/header.php'); ?>
+<?php include('includes/header.php'); ?>
 
 <div class="blog-header">
-    <h1 class="blog-title">Laravel - Jour 3</h1>
+    <h1 class="blog-title">Laravel - Jour 2</h1>
     <p class="lead blog-description">...</p>
 </div>
 
@@ -65,11 +65,11 @@
             <p>Cras mattis consectetur purus sit amet fermentum. Sed posuere consectetur est at lobortis.</p>
         </div><!-- /.blog-post -->
 
-        <a href="/day-4" class="pull-right btn btn-info">Passer à la suite</a>
+        <a href="day-3.php" class="pull-right btn btn-info">Passer à la suite</a>
 
     </div><!-- /.blog-main -->
 
-    <?php include('../includes/sidebar.php'); ?>
+    <?php include('includes/sidebar.php'); ?>
 
 </div><!-- /.row -->
 
