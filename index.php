@@ -170,22 +170,163 @@ return view('mavue.blade.php', compact('ecole');
             <div class="panel-body">
                 Entraînez-vous en faisant usage de :
                 <ul>
-                    <li>Créez un fichier layout.blade.php qui contiendra le HTML ci-dessus.
-                    <li>Dans ce fichier layout :
-                        <ul>
-                            <li>Remplacez le title par @yield qui permettra de le définir selon la page où l'on se trouve.</li>
-                            <li>Remplacez le commentaire par un @yield qui définira où sera écrit le contenu de votre page.</li>
-                        </ul></li>
-                    <li>Créez deux nouveaux fichiers blade qui étendront de layout.blade.php et remplissez-y les section du titre et du contenu.</li>
+                    <li>Créez un fichier layout.blade.php qui contiendra le HTML ci-dessus.</li>
+                    <li>Dans ce fichier layout :</li>
+                    <ul>
+                        <li>Remplacez le title par @yield qui permettra de le définir selon la page où l'on se
+                            trouve.
+                        </li>
+                        <li>Remplacez le commentaire par un @yield qui définira où sera écrit le contenu de votre
+                            page.
+                        </li>
+                    </ul>
+                    <li>Créez deux nouveaux fichiers blade qui étendront de layout.blade.php et remplissez-y les section
+                        du titre et du contenu.
+                    </li>
                 </ul>
             </div>
         </div>
 
+        <!-- TODO un exo sur les migrations ? -->
+
         <h2 id="exo5">Exercice 5 : Query Builder</h2>
+
+        <br>
+        <div class="alert alert-warning">Cet exercice est à commencer après avoir vu la partie du cours sur les
+            migrations !
+        </div>
+
+        <p>Le <strong>Query Builder</strong> va nous permettre de formuler des requêtes afin d'intéragir avec
+            la base de données.
+            Le Query Builder a pour avantage de simplifier la syntaxe d'une requête, et de la rendre plus simple à lire.<br>
+            Par exemple, cette requête va nous permettre de récupérer l'article correspondant à l'id 12. :</p>
+        <pre>
+            <code class="language-php">
+                DB::table('posts')->where('id', 12);
+            </code>
+        </pre>
+
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h3 class="panel-title">Exercice 5</h3>
+            </div>
+            <div class="panel-body">
+                <ul>
+                    <li>Créez une route <strong>/posts/create</strong> qui aura pour but d'insérer un nouvel article
+                        dans la base de données à l'aide du <strong>Query Builder</strong>.
+                    </li>
+                    <ul>
+                        <li>Cette route devra être liée à un template
+                            <strong>resources/views/posts/create.blade.php</strong></li>
+                    </ul>
+                    <br>
+
+                    <li>Toujours à l'aide du Query Builder, récupérez la liste de tous les articles en base de données
+                        et affichez-les sur une route nommée <strong>/posts</strong>.
+                    </li>
+                    <ul>
+                        <li>Cette route devra être liée à un template
+                            <strong>resources/views/posts/index.blade.php</strong></li>
+                    </ul>
+                    <br>
+
+                    <li>Créez une route <strong>/posts/id</strong> qui prendra en paramètre l'id d'un article et qui
+                        affichera l'article en question.
+                    </li>
+                    <ul>
+                        <li>Cette route devra être liée à un template
+                            <strong>resources/views/posts/show.blade.php</strong></li>
+                    </ul>
+                    <br>
+
+                    <li>Créez une route <strong>/posts/id/edit</strong> qui prendra en paramètre l'id d'un article et
+                        qui modifiera le titre et le contenu de l'article en question.
+                    </li>
+                    <ul>
+                        <li>Cette route devra être liée à un template
+                            <strong>resources/views/posts/edit.blade.php</strong></li>
+                    </ul>
+                </ul>
+            </div>
+        </div>
+
+        <h2 id="exo6">Exercice 6 : Eloquent</h2>
+
+        <!-- Convertir tout ce qui a été fait avec le QB avec Eloquent-->
+
+        <h2 id="exo7">Exercice 7 : Controllers</h2>
+
+        <!-- Création d'un TestController
+        - Créez une méthode pour chaque route précédemment créée (index, show, create, edit)
+        - Placez le code que vous aviez fait dans vos routes directement dans ces méthodes
+        - Relier toutes les routes aux méthodes du controller
+        -->
+
+        <h2 id="exo7bis">Exercice 7.5 : Resource Controllers </h2>
+        <!-- A l'aide d'une ligne de commande, crééz un PostController
+        qui sera prérempli de toutes les méthodes dont on aura besoin.
+         - index, create, store, show, edit, update, destroy
+         - créez une route resource qui liera en une ligne vos routes /posts avec ce controller.
+         - vous pouvez supprimer le TestController.
+         -->
+
+        <h2 id="exo8">Exercice 8 : Formulaires</h2>
+        <!--
+        Créez un formulaire d'ajout pour publier des articles dans le fichier /posts/create.blade.php
+        - Ce formulaire devra comprendre un titre et un contenu
+        - Le formulaire doit rediriger vers la route /posts (?) en méthode POST
+        - Ajoutez bien le csrf_field
+        - Renseignez les fillable ou guarded dans le model
+        - Vérifiez que les données sont bien passées à la route en faisant un dump de $request
+        -->
+
+        <h2 id="exo9">Exercice 9 : Validations</h2>
+        <!--
+        Ajoutez des règles de validation à votre formulaire
+        - Titre : requis, minimum 5 caractères
+        - Contenu : requis, minimum 10 caractères
+        - Affichez les erreurs retournées dans votre vue
+        -->
+
+        <h2 id="exo10">Exercice 10 : Le reste de notre CRUD </h2>
+        <!--
+        - Faire le formulaire d'édition
+        - Faire la page show
+        - Faire un formulaire de suppression
+        -->
+
+        <h2 id="exo11">Exercice 11 : Relations</h2>
+        <!--
+        - Faire make:auth)
+        - Mettre en place la relation entre User et Post
+        - Update les migrations posts pour prendre un user_id
+        - Sur show.blade.php, afficher l'auteur de l'article
+        - Créez une route de profil pour l'utilisateur affichant son nom ainsi que la liste de tous ses articles
+        -->
+
+        <h2 id="exo12">Exercice 12 : Système de commentaire </h2>
+        <!-- à faire entièrement -->
+
+        <h2 id="exo13">Exercice 13 : Middlewares </h2>
+        <!-- Pour limiter la publication aux utilisateurs connectés
+         - Page d'administration ?
+         -->
+
+        <h2 id="exo14">Exercice 14 : </h2>
+        <h2 id="exo15">Exercice 15 : </h2>
+        <h2 id="exo16">Exercice 16 : </h2>
+        <h2 id="exo17">Exercice 17 : </h2>
+
+
+
+
+
+
+
 
         <a href="/day-2" class="pull-right btn btn-info">Passer à la suite</a>
 
-    </div><!-- /.blog-main -->
+    </div>
 
 
     <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
@@ -198,6 +339,7 @@ return view('mavue.blade.php', compact('ecole');
                     <li><a href="#exo3">Exercice 3 : Blade</a></li>
                     <li><a href="#exo4">Exercice 4 : Blade Templating</a></li>
                     <li><a href="#exo5">Exercice 5 : Query Builder</a></li>
+                    <li><a href="#exo6">Exercice 6 : Eloquent</a></li>
                 </ul>
             </div>
 
