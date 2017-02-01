@@ -187,9 +187,22 @@ return view('mavue.blade.php', compact('ecole');
             </div>
         </div>
 
-        <!-- TODO un exo sur les migrations ? -->
+        <h2 id="exo5">Exercice 5 : Les migrations</h2>
 
-        <h2 id="exo5">Exercice 5 : Query Builder</h2>
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h3 class="panel-title">Exercice 5</h3>
+            </div>
+            <div class="panel-body">
+                <ul>
+                    <li>Créez une migration pour la table "posts" qui contiendra nos articles</li>
+                    <li>Via les fichiers de migrations, ajoutez des champs : title, content, user_id</li>
+                    <li>Lancez votre migration</li>
+                </ul>
+            </div>
+        </div>
+
+        <h2 id="exo6">Exercice 6 : Query Builder</h2>
 
         <br>
         <div class="alert alert-warning">Cet exercice est à commencer après avoir vu la partie du cours sur les
@@ -208,7 +221,7 @@ return view('mavue.blade.php', compact('ecole');
 
         <div class="panel panel-primary">
             <div class="panel-heading">
-                <h3 class="panel-title">Exercice 5</h3>
+                <h3 class="panel-title">Exercice 6</h3>
             </div>
             <div class="panel-body">
                 <ul>
@@ -250,79 +263,200 @@ return view('mavue.blade.php', compact('ecole');
             </div>
         </div>
 
-        <h2 id="exo6">Exercice 6 : Eloquent</h2>
+        <h2 id="exo7">Exercice 7 : Eloquent</h2>
 
-        <!-- Convertir tout ce qui a été fait avec le QB avec Eloquent-->
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h3 class="panel-title">Exercice 7</h3>
+            </div>
+            <div class="panel-body">
+                <ul>
+                    <li>Convertir tout ce qui a été fait avec le QB avec Eloquent</li>
+                </ul>
+            </div>
+        </div>
 
-        <h2 id="exo7">Exercice 7 : Controllers</h2>
+        <h2 id="exo8">Exercice 8 : Controllers</h2>
 
-        <!-- Création d'un TestController
-        - Créez une méthode pour chaque route précédemment créée (index, show, create, edit)
-        - Placez le code que vous aviez fait dans vos routes directement dans ces méthodes
-        - Relier toutes les routes aux méthodes du controller
-        -->
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h3 class="panel-title">Exercice 8</h3>
+            </div>
+            <div class="panel-body">
+                <ul>
+                    <li>Création d'un TestController</li>
+                    <li>Créez une méthode pour chaque route précédemment créée (index, show, create, edit)</li>
+                    <li>Placez le code que vous aviez fait dans vos routes directement dans ces méthodes</li>
+                    <li>Relier toutes les routes aux méthodes du controller</li>
+                </ul>
+            </div>
+        </div>
 
-        <h2 id="exo7bis">Exercice 7.5 : Resource Controllers </h2>
-        <!-- A l'aide d'une ligne de commande, crééz un PostController
-        qui sera prérempli de toutes les méthodes dont on aura besoin.
-         - index, create, store, show, edit, update, destroy
-         - créez une route resource qui liera en une ligne vos routes /posts avec ce controller.
-         - vous pouvez supprimer le TestController.
-         -->
+        <h2 id="exo8bis">Exercice 8.5 : Resource Controllers </h2>
 
-        <h2 id="exo8">Exercice 8 : Formulaires</h2>
-        <!--
-        Créez un formulaire d'ajout pour publier des articles dans le fichier /posts/create.blade.php
-        - Ce formulaire devra comprendre un titre et un contenu
-        - Le formulaire doit rediriger vers la route /posts (?) en méthode POST
-        - Ajoutez bien le csrf_field
-        - Renseignez les fillable ou guarded dans le model
-        - Vérifiez que les données sont bien passées à la route en faisant un dump de $request
-        -->
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h3 class="panel-title">Exercice 8.5</h3>
+            </div>
+            <div class="panel-body">
+                <p>A l'aide d'une ligne de commande, crééz un PostController
+                    qui sera prérempli de toutes les méthodes dont on aura besoin.</p>
+                <ul>
+                    <li>index, create, store, show, edit, update, destroy</li>
+                    <li>créez une route resource qui liera en une ligne vos routes /posts avec ce controller.</li>
+                    <li>vous pouvez supprimer le TestController.</li>
+                </ul>
+            </div>
+        </div>
 
-        <h2 id="exo9">Exercice 9 : Validations</h2>
-        <!--
-        Ajoutez des règles de validation à votre formulaire
-        - Titre : requis, minimum 5 caractères
-        - Contenu : requis, minimum 10 caractères
-        - Affichez les erreurs retournées dans votre vue
-        -->
+        <h2 id="exo9">Exercice 9 : Formulaires</h2>
 
-        <h2 id="exo10">Exercice 10 : Le reste de notre CRUD </h2>
-        <!--
-        - Faire le formulaire d'édition
-        - Faire la page show
-        - Faire un formulaire de suppression
-        -->
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h3 class="panel-title">Exercice 9</h3>
+            </div>
+            <div class="panel-body">
+                <p>Créez un formulaire d'ajout pour publier des articles dans le fichier /posts/create.blade.php</p>
+                <ul>
+                    <li>Ce formulaire devra comprendre un titre et un contenu</li>
+                    <li>Le formulaire doit rediriger vers la route /posts (?) en méthode POST</li>
+                    <li>Ajoutez bien le csrf_field</li>
+                    <li>Renseignez les fillable ou guarded dans le model</li>
+                    <li>Vérifiez que les données sont bien passées à la route en faisant un dump de $request</li>
+                </ul>
+            </div>
+        </div>
 
-        <h2 id="exo11">Exercice 11 : Relations</h2>
-        <!--
-        - Faire make:auth)
-        - Mettre en place la relation entre User et Post
-        - Update les migrations posts pour prendre un user_id
-        - Sur show.blade.php, afficher l'auteur de l'article
-        - Créez une route de profil pour l'utilisateur affichant son nom ainsi que la liste de tous ses articles
-        -->
+        <h2 id="exo10">Exercice 10 : Validations</h2>
 
-        <h2 id="exo12">Exercice 12 : Système de commentaire </h2>
-        <!-- à faire entièrement -->
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h3 class="panel-title">Exercice 10</h3>
+            </div>
+            <div class="panel-body">
+                <ul>
+                    <li>Ajoutez des règles de validation à votre formulaire</li>
+                    <li>Titre : requis, minimum 5 caractères</li>
+                    <li>Contenu : requis, minimum 10 caractères</li>
+                    <li>Affichez les erreurs retournées dans votre vue</li>
+                </ul>
+            </div>
+        </div>
 
-        <h2 id="exo13">Exercice 13 : Middlewares </h2>
-        <!-- Pour limiter la publication aux utilisateurs connectés
-         - Page d'administration ?
-         -->
+        <h2 id="exo11">Exercice 11 : Le reste de notre CRUD </h2>
 
-        <h2 id="exo14">Exercice 14 : </h2>
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h3 class="panel-title">Exercice 11</h3>
+            </div>
+            <div class="panel-body">
+                <ul>
+                    <li>Faire le formulaire d'édition</li>
+                    <li>Faire la page show</li>
+                    <li>Faire un formulaire de suppression</li>
+                </ul>
+            </div>
+        </div>
+
+        <h2 id="exo12">Exercice 12 : Relations</h2>
+
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h3 class="panel-title">Exercice 12</h3>
+            </div>
+            <div class="panel-body">
+                <ul>
+                    <li>Faire make:auth</li>
+                    <li>Mettre en place la relation entre User et Post</li>
+                    <li>Update les migrations posts pour prendre un user_id</li>
+                    <li>Sur show.blade.php, afficher l'auteur de l'article</li>
+                    <li>Créez une route de profil pour l'utilisateur affichant son nom ainsi que la liste de tous ses articles</li>
+                </ul>
+            </div>
+        </div>
+
+        <h2 id="exo13">Exercice 13 : Système de commentaire </h2>
+
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h3 class="panel-title">Exercice 13</h3>
+            </div>
+            <div class="panel-body">
+                <ul>
+                    <li>à faire entièrement</li>
+                </ul>
+            </div>
+        </div>
+
+        <h2 id="exo14">Exercice 14 : Middlewares </h2>
+
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h3 class="panel-title">Exercice 14</h3>
+            </div>
+            <div class="panel-body">
+                <ul>
+                    <li>Pour limiter la publication aux utilisateurs connectés</li>
+                    <li>Page d'administration ?</li>
+                </ul>
+            </div>
+        </div>
+
         <h2 id="exo15">Exercice 15 : </h2>
+
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h3 class="panel-title">Exercice 15</h3>
+            </div>
+            <div class="panel-body">
+                <ul>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+        </div>
+
         <h2 id="exo16">Exercice 16 : </h2>
+
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h3 class="panel-title">Exercice 16</h3>
+            </div>
+            <div class="panel-body">
+                <ul>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+        </div>
+
         <h2 id="exo17">Exercice 17 : </h2>
 
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h3 class="panel-title">Exercice 17</h3>
+            </div>
+            <div class="panel-body">
+                <ul>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+        </div>
 
+        <h2 id="exo18">Exercice 18 : </h2>
 
-
-
-
-
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h3 class="panel-title">Exercice 18</h3>
+            </div>
+            <div class="panel-body">
+                <ul>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+        </div>
 
         <a href="/day-2" class="pull-right btn btn-info">Passer à la suite</a>
 
@@ -338,8 +472,6 @@ return view('mavue.blade.php', compact('ecole');
                     <li><a href="#exo2">Exercice 2 : Vues</a></li>
                     <li><a href="#exo3">Exercice 3 : Blade</a></li>
                     <li><a href="#exo4">Exercice 4 : Blade Templating</a></li>
-                    <li><a href="#exo5">Exercice 5 : Query Builder</a></li>
-                    <li><a href="#exo6">Exercice 6 : Eloquent</a></li>
                 </ul>
             </div>
 
