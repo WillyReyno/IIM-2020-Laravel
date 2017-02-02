@@ -233,9 +233,11 @@ return view('mavue.blade.php', compact('ecole');
             </div>
         </div>
 
+        <!-- TODO Vérifier qu'on ne fait pas le Auth avant le templating ?
+        TODO et garder l'inté d'un thème complet pour le rendu -->
+
         <!-- Templating complet -->
         <div id="exo4bis">
-            <!-- TODO Exo 4.1 -->
             <h2>Exercice 4.1 : Un template un peu plus complet ! </h2>
 
             <div class="panel panel-primary">
@@ -420,6 +422,25 @@ MAC_UNIX_SOCKET=/Applications/MAMP/tmp/mysql/mysql.sock
             </div>
         </div>
 
+        <!-- Authentification -->
+        <div id="auth">
+            <h2>Authentification</h2>
+
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Authentification</h3>
+                </div>
+                <div class="panel-body">
+                    <ul>
+                        <li>Faire make:auth (forcément après les migrations d'users)</li>
+                        <li>S'inscrire sur son site</li>
+                        <!-- TODO parler des auth:check()) -->
+                        <li>Afficher quelque chose uniquement lorsque l'on est connecté</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
         <!-- Query Builder -->
         <div id="exo7">
             <h2>Exercice 7 : Query Builder</h2>
@@ -493,8 +514,45 @@ MAC_UNIX_SOCKET=/Applications/MAMP/tmp/mysql/mysql.sock
                 <div class="panel-body">
                     <ul>
                         <li>Créez un model Post et renseignez les champs $fillable dans un array protected</li>
-                        <li>Maintenant, utilisez votre model afin de récupérer vos données plutôt que le Query
-                            Builder.
+                        <li>Maintenant, utilisez votre model afin de récupérer vos données (plus besoin du Query
+                            Builder)
+                        </li>
+                        <li>Affichez le résultat dans vos vues (index</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pagination -->
+        <div id="exo8bis">
+            <h2>Exercice 8.1 : Pagination</h2>
+
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Exercice 8.1</h3>
+                </div>
+                <div class="panel-body">
+                    <ul>
+                        <li>Mettez en place une pagination sur votre page posts/index.blade.php</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Relations -->
+        <div id="exo8ter">
+            <h2>Exercice 8.2 : Relations</h2>
+
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Exercice 8.2</h3>
+                </div>
+                <div class="panel-body">
+                    <ul>
+                        <li>Mettre en place la relation entre User et Post</li>
+                        <li>Sur show.blade.php, afficher l'auteur de l'article</li>
+                        <li>Créez une route de profil pour l'utilisateur affichant son nom ainsi que la liste de tous
+                            ses articles
                         </li>
                     </ul>
                 </div>
@@ -503,7 +561,7 @@ MAC_UNIX_SOCKET=/Applications/MAMP/tmp/mysql/mysql.sock
 
         <!-- Formulaires -->
         <div id="exo9">
-            <h2>Exercice 9 : Formulaires</h2>
+            <h2>Exercice 9 : Formulaire</h2>
 
             <div class="panel panel-primary">
                 <div class="panel-heading">
@@ -512,11 +570,17 @@ MAC_UNIX_SOCKET=/Applications/MAMP/tmp/mysql/mysql.sock
                 <div class="panel-body">
                     <p>Créez un formulaire d'ajout pour publier des articles dans le fichier /posts/create.blade.php</p>
                     <ul>
-                        <li>Ce formulaire devra comprendre un titre et un contenu</li>
-                        <li>Le formulaire doit rediriger vers la route /posts (?) en méthode POST</li>
+                        <li>Ce formulaire devra comprendre un champ titre et un champ contenu, veillez à ce que les name
+                            de ces inputs correspondent aux noms que vous leur avez donné en BDD pour simplifier la
+                            tâche.
+                        </li>
+                        <li>Le formulaire doit rediriger vers la méthode store de votre PostController</li>
                         <li>Ajoutez bien le csrf_field</li>
                         <li>Renseignez les fillable ou guarded dans le model</li>
                         <li>Vérifiez que les données sont bien passées à la route en faisant un dump de $request</li>
+                        <li>Dans la méthode store du controller, créez un nouvel objet Post dans lequel vous stockerez les $request->input(); </li>
+                        <li>Pensez également à stocker l'user_id dans cette méthode !</li>
+                        <li>Pour finir, faites une redirection vers la liste des articles.</li>
                     </ul>
                 </div>
             </div>
@@ -551,49 +615,22 @@ MAC_UNIX_SOCKET=/Applications/MAMP/tmp/mysql/mysql.sock
                 </div>
                 <div class="panel-body">
                     <ul>
-                        <li>Faire le formulaire d'édition</li>
-                        <li>Faire la page show</li>
+                        <li>Reprenez la forme du formulaire de création afin de faire celui d'édition dans posts/edit.blade.php.</li>
+                        <li>Faire le formulaire d'édition avec la fonction old()</li>
+                        <li>Faire la page show</li> <!-- TODO faire ça plus tôt -->
                         <li>Faire un formulaire de suppression</li>
                     </ul>
                 </div>
             </div>
         </div>
 
-        <!-- Relations -->
+        <!-- Commentaires -->
         <div id="exo12">
-            <h2>Exercice 12 : Relations</h2>
+            <h2>Exercice 12 : Système de commentaire </h2>
 
             <div class="panel panel-primary">
                 <div class="panel-heading">
                     <h3 class="panel-title">Exercice 12</h3>
-                </div>
-                <div class="panel-body">
-                    <ul>
-                        <!-- TODO faire un .1 / entracte / autre ? -->
-                        <li>Faire make:auth (forcément après les migrations d'users)</li>
-                        <li>S'inscrire sur son site</li>
-                        <!-- TODO parler des auth:check()) -->
-                        <li>Afficher quelque chose uniquement lorsque l'on est connecté</li>
-
-                        <li>Mettre en place la relation entre User et Post</li>
-                        <li>Update les migrations posts pour prendre un user_id</li>
-                        <li>Sur show.blade.php, afficher l'auteur de l'article</li>
-                        <li>Créez une route de profil pour l'utilisateur affichant son nom ainsi que la liste de tous
-                            ses
-                            articles
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <!-- Commentaires -->
-        <div id="exo13">
-            <h2>Exercice 13 : Système de commentaire </h2>
-
-            <div class="panel panel-primary">
-                <div class="panel-heading">
-                    <h3 class="panel-title">Exercice 13</h3>
                 </div>
                 <div class="panel-body">
                     <ul>
@@ -604,12 +641,12 @@ MAC_UNIX_SOCKET=/Applications/MAMP/tmp/mysql/mysql.sock
         </div>
 
         <!-- Middlewares -->
-        <div id="exo14">
-            <h2>Exercice 14 : Middlewares </h2>
+        <div id="exo13">
+            <h2>Exercice 13 : Middlewares </h2>
 
             <div class="panel panel-primary">
                 <div class="panel-heading">
-                    <h3 class="panel-title">Exercice 14</h3>
+                    <h3 class="panel-title">Exercice 13</h3>
                 </div>
                 <div class="panel-body">
                     <ul>
@@ -708,14 +745,16 @@ MAC_UNIX_SOCKET=/Applications/MAMP/tmp/mysql/mysql.sock
                     <li><a href="#exo6">Exercice 6 : Migrations</a></li>
                     <li><a href="#exo6bis">Exercice 6.1 : Clés étrangères</a></li>
                     <li><a href="#exo6ter">Exercice 6.2 : Seeders</a></li>
+                    <li><a href="#auth">Authentification</a></li>
                     <li><a href="#exo7">Exercice 7 : Query Builder</a></li>
                     <li><a href="#exo8">Exercice 8 : Models et Eloquent</a></li>
+                    <li><a href="#exo8bis">Exercice 8.1 : Pagination</a></li>
+                    <li><a href="#exo8ter">Exercice 8.2 : Relations</a></li>
                     <li><a href="#exo9">Exercice 9 : Formulaires</a></li>
                     <li><a href="#exo10">Exercice 10 : Validations</a></li>
                     <li><a href="#exo11">Exercice 11 : CRUD</a></li>
-                    <li><a href="#exo12">Exercice 12 : Relations</a></li>
-                    <li><a href="#exo13">Exercice 13 : Système de Commentaire</a></li>
-                    <li><a href="#exo14">Exercice 14 : Middlewares</a></li>
+                    <li><a href="#exo12">Exercice 12 : Système de Commentaire</a></li>
+                    <li><a href="#exo13">Exercice 13 : Middlewares</a></li>
                 </ul>
             </div>
 
