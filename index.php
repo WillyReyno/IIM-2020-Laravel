@@ -235,12 +235,12 @@ return view('mavue.blade.php', compact('ecole');
 
         <!-- Templating complet -->
         <div id="exo4bis">
-            <!-- TODO Exo 4.5 -->
-            <h2>Exercice 4.5 : Un template un peu plus complet ! </h2>
+            <!-- TODO Exo 4.1 -->
+            <h2>Exercice 4.1 : Un template un peu plus complet ! </h2>
 
             <div class="panel panel-primary">
                 <div class="panel-heading">
-                    <h3 class="panel-title">Exercice 4.5</h3>
+                    <h3 class="panel-title">Exercice 4.1</h3>
                 </div>
                 <div class="panel-body">
                     Entraînez-vous en faisant usage de :
@@ -288,11 +288,11 @@ return view('mavue.blade.php', compact('ecole');
 
         <!-- Resource Controllers -->
         <div id="exo5bis">
-            <h2>Exercice 5.5 : Resource Controllers </h2>
+            <h2>Exercice 5.1 : Resource Controllers </h2>
 
             <div class="panel panel-primary">
                 <div class="panel-heading">
-                    <h3 class="panel-title">Exercice 5.5</h3>
+                    <h3 class="panel-title">Exercice 5.1</h3>
                 </div>
                 <div class="panel-body">
                     <p>A l'aide d'une ligne de commande, crééz un PostController
@@ -569,7 +569,7 @@ MAC_UNIX_SOCKET=/Applications/MAMP/tmp/mysql/mysql.sock
                 </div>
                 <div class="panel-body">
                     <ul>
-                        <!-- TODO faire un .5 / entracte / autre ? -->
+                        <!-- TODO faire un .1 / entracte / autre ? -->
                         <li>Faire make:auth (forcément après les migrations d'users)</li>
                         <li>S'inscrire sur son site</li>
                         <!-- TODO parler des auth:check()) -->
@@ -702,6 +702,20 @@ MAC_UNIX_SOCKET=/Applications/MAMP/tmp/mysql/mysql.sock
                     <li><a href="#exo2">Exercice 2 : Vues</a></li>
                     <li><a href="#exo3">Exercice 3 : Blade</a></li>
                     <li><a href="#exo4">Exercice 4 : Blade Templating</a></li>
+                    <li><a href="#exo4bis">Exercice 4.1 : Template complet</a></li>
+                    <li><a href="#exo5">Exercice 5 : Controllers</a></li>
+                    <li><a href="#exo5bis">Exercice 5.1 : Resource Controllers</a></li>
+                    <li><a href="#exo6">Exercice 6 : Migrations</a></li>
+                    <li><a href="#exo6bis">Exercice 6.1 : Clés étrangères</a></li>
+                    <li><a href="#exo6ter">Exercice 6.2 : Seeders</a></li>
+                    <li><a href="#exo7">Exercice 7 : Query Builder</a></li>
+                    <li><a href="#exo8">Exercice 8 : Models et Eloquent</a></li>
+                    <li><a href="#exo9">Exercice 9 : Formulaires</a></li>
+                    <li><a href="#exo10">Exercice 10 : Validations</a></li>
+                    <li><a href="#exo11">Exercice 11 : CRUD</a></li>
+                    <li><a href="#exo12">Exercice 12 : Relations</a></li>
+                    <li><a href="#exo13">Exercice 13 : Système de Commentaire</a></li>
+                    <li><a href="#exo14">Exercice 14 : Middlewares</a></li>
                 </ul>
             </div>
 
