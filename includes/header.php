@@ -25,10 +25,10 @@
 <div class="blog-masthead">
     <div class="container">
         <nav class="blog-nav">
-            <a class="blog-nav-item" href="index.php">Jour 1</a>
-            <a class="blog-nav-item" href="day-2.php">Jour 2</a>
-            <a class="blog-nav-item" href="day-3.php">Jour 3</a>
-            <a class="blog-nav-item" href="day-4.php">Jour 4</a>
+            <a class="blog-nav-item" href="index.php">Partie 1</a>
+            <a class="blog-nav-item" href="part2.php">Partie 2</a>
+            <a class="blog-nav-item" href="part3.php">Partie 3</a>
+            <a class="blog-nav-item" href="part4.php">Partie 4</a>
         </nav>
     </div>
 </div>
