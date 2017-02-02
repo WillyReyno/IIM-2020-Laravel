@@ -7,6 +7,7 @@
 
 <div class="row">
 
+
     <div class="col-sm-8 blog-main">
 
         <!-- Introduction -->
@@ -19,7 +20,17 @@
                 avec articles et commentaires.</p>
 
             <p>Surtout, commencez ces exercices sur une installation Laravel vierge !</p>
+
+            <div class="alert alert-info">Afin de vous aider pour chaque nouvelle partie traitée nous avons ajouté un
+                lien vers la page de
+                la documentation liée à cette partie.
+                <br>
+                Vous les trouverez en cliquant sur les icônes suivantes : <a href="#"><i
+                        class="fa fa-book"></i></a>.
+            </div>
         </div>
+
+        <!-- <a href="https://laravel.com/docs/5.4" target="_blank"><i class="fa fa-book"></i></a>
 
         <!-- Routes -->
         <div id="exo1">
@@ -60,7 +71,7 @@ Route::get('/helloworld', function() {
                 <div class="panel-body">
                     <ul>
                         <li>Créez une route <em>/iim</em> qui retournera le texte : "Institut de l'Internet et du
-                            Multimédia".
+                            Multimédia". <a href=""><i class="fa fa-book"></i></a>
                         </li>
                         <li>Créez une seconde route qui prendra un paramètre et le retournera à l'écran.</li>
                     </ul>
@@ -355,6 +366,60 @@ MAC_UNIX_SOCKET=/Applications/MAMP/tmp/mysql/mysql.sock
             </div>
         </div>
 
+        <!-- Clés Etrangères -->
+        <div id="exo6bis">
+            <h2>Exercice 6.1 : Clés étrangères</h2>
+
+            <pre>
+            <code class="language-php">
+                // Code clé étrangère
+            </code>
+        </pre>
+
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Exercice 6.1</h3>
+                </div>
+                <div class="panel-body">
+                    <ul>
+                        <li>Définissez une clé étrangère liant la table user à la table posts</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Seeders & Factories -->
+        <div id="exo6ter">
+            <h2>Exercice 6.2 : Seeders & Factories</h2>
+
+            <pre>
+            <code class="language-php">
+                // Seeders
+            </code>
+        </pre>
+
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Exercice 6.2</h3>
+                </div>
+                <div class="panel-body">
+                    <ul>
+                        <li>Dans le fichier database/factories/ModelFactory.php, dupliquez le code existant et
+                            adaptez-le à votre table posts.
+                        </li>
+                        <li>Les types de faux contenus proposés par le package Faker sont disponibles sur
+                            <a href="https://github.com/fzaninotto/Faker">
+                                le repository du package</a>.
+                        </li>
+                        <p>Dans votre fichier PostsTableSeeder faites appel à la méthode Factory en lui passant en
+                            paramètre votre modèle + le nombre d'itérations voulues.</p>
+                        <li>Appelez ensuite la class PostsTableSeeder dans votre DatabaseSeeder.php</li>
+                        <li>Lancez la ligne de commander d'execution des seeders !</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
         <!-- Query Builder -->
         <div id="exo7">
             <h2>Exercice 7 : Query Builder</h2>
@@ -417,9 +482,9 @@ MAC_UNIX_SOCKET=/Applications/MAMP/tmp/mysql/mysql.sock
             </div>
         </div>
 
-        <!-- Eloquent -->
+        <!-- Models & Eloquent -->
         <div id="exo8">
-            <h2>Exercice 8 : Eloquent</h2>
+            <h2>Exercice 8 : Models et Eloquent</h2>
 
             <div class="panel panel-primary">
                 <div class="panel-heading">
@@ -427,7 +492,10 @@ MAC_UNIX_SOCKET=/Applications/MAMP/tmp/mysql/mysql.sock
                 </div>
                 <div class="panel-body">
                     <ul>
-                        <li>Convertir tout ce qui a été fait avec le QB avec Eloquent</li>
+                        <li>Créez un model Post et renseignez les champs $fillable dans un array protected</li>
+                        <li>Maintenant, utilisez votre model afin de récupérer vos données plutôt que le Query
+                            Builder.
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -619,8 +687,6 @@ MAC_UNIX_SOCKET=/Applications/MAMP/tmp/mysql/mysql.sock
                 </div>
             </div>
         </div>
-
-        <!-- TODO Seeders / Factories -->
 
         <a href="/day-2" class="pull-right btn btn-info">Passer à la suite</a>
 
