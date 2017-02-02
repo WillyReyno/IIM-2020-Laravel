@@ -16,6 +16,8 @@
     <![endif]-->
 
     <script src="assets/js/prism.js"></script>
+
+    <script src="https://use.fontawesome.com/63fc4a1a9e.js"></script>
 </head>
 
 <body>
