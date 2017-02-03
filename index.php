@@ -2,7 +2,7 @@
 
 <div class="blog-header">
     <h1 class="blog-title">Laravel - Partie 1</h1>
-    <p class="lead blog-description">Créons nos premières routes, nos premières vues... </p>
+    <p class="lead blog-description">Routes, Vues et Templating.</p>
 </div>
 
 <div class="row">
@@ -16,30 +16,36 @@
 
             <!-- TODO Intro -->
 
-            <p>Au cours de ces exercices vous allez apprendre à créer un système de blog simple
-                avec articles et commentaires.</p>
+            <p>Au cours de cette vingtaine d'exercices vous apprendrez à créer un blog avec Laravel
+                (publication d'articles, édition, suppression...).</p>
 
-            <p>Surtout, commencez ces exercices sur une installation Laravel vierge !</p>
-
-            <div class="alert alert-info">Afin de vous aider pour chaque nouvelle partie traitée nous avons ajouté un
-                lien vers la page de
-                la documentation liée à cette partie.
-                <br>
-                Vous les trouverez en cliquant sur les icônes suivantes : <a href="#"><i
-                        class="fa fa-book"></i></a>.
+            <div class="alert alert-info">Afin de vous aider nous avons ajouté des liens vers la <a
+                    href="https://laravel.com/docs/5.4">documentation officielle de Laravel</a>, cette
+                dernière étant extrêmement bien rédigée et facile à comprendre, nous vous invitons à vous en servir dès
+                que vous avez un doute où que vous souhaitez revoir un point spécifique.<br>
+                Vous trouverez les liens vers la documentation en cliquant sur les icônes présentes sur ces pages : <a
+                    href="#"><i class="fa fa-book"></i></a>.
             </div>
+
+            <p>Ces exercices sont découpés en 4 parties qui correspondent aux 4 parties du CM que votre intervenant fera
+                avec vous.<br>
+                Ne commencez donc pas les exercices de la partie 2 sans avoir eu la 2ème partie du CM !</p>
+
+            <p>Si vous êtes bloqués, n'hésitez pas à demander à vos camarades, à consulter la documentation, ou à
+                demander à votre intervenant.</p>
         </div>
 
         <!-- <a href="https://laravel.com/docs/5.4" target="_blank"><i class="fa fa-book"></i></a>
 
         <!-- Routes -->
         <div id="exo1">
-            <h2>Exercice 1 : Les routes</h2>
+            <h2>Exercice 1 : Les routes <a href="https://laravel.com/docs/5.4/routing" target="_blank"><i
+                        class="fa fa-book"></i></a></h2>
 
             <p>Afin de pouvoir naviguer sur votre site, vous allez devoir définir des <strong>routes</strong> qui feront
                 office de lien vers vos pages.
                 Une route se défini avec un chemin (ex : <em>/accueil</em>, <em>/a-propos</em>, etc.)
-                et est toujours liée à une fonction ou un méthode de Controller (que nous verrons plus tard).</p>
+                et est toujours liée à une fonction ou une méthode de Controller (que nous verrons plus tard).</p>
 
             <blockquote>
                 Dans Laravel 5.4, les routes se définissent dans le fichier <strong>/routes/web.php</strong>
@@ -58,7 +64,9 @@ Route::get('/helloworld', function() {
                     cela nous retournera <strong>"Hello World"</strong>.</em></p>
 
 
-            <p>Il est également possible de passer des paramètres dans une route afin d'afficher du contenu
+            <p>Il est également possible de passer des paramètres <a
+                    href="https://laravel.com/docs/5.4/routing#required-parameters" target="_blank"><i
+                        class="fa fa-book"></i></a> dans une route afin d'afficher du contenu
                 dynamique.<br>
                 Ces paramètres se définissent dans le chemin de la route à l'aide d'accolades (ex :
                 <strong>{monparametre}</strong>) et se passent en paramètre dans la fonction sous forme de variable
@@ -70,9 +78,11 @@ Route::get('/helloworld', function() {
                 </div>
                 <div class="panel-body">
                     <ul>
-                        <li>Créez une route <em>/iim</em> qui retournera le texte : "Institut de l'Internet et du
-                            Multimédia". <a href=""><i class="fa fa-book"></i></a>
+                        <li>Créez une route <strong>/iim</strong> qui retournera le texte : "Institut de l'Internet et
+                            du
+                            Multimédia".
                         </li>
+                        <br>
                         <li>Créez une seconde route qui prendra un paramètre et le retournera à l'écran.</li>
                     </ul>
                 </div>
@@ -84,10 +94,10 @@ Route::get('/helloworld', function() {
             <h2>Exercice 2 : Les vues</h2>
 
             <p>Une fois vos routes créées, il vous faudra les lier à des <strong>vues</strong> afin d'afficher autre
-                chose
-                que de simple phrases..
-                Dans Laravel, les vues sont sont gérées par le moteur de template <strong>Blade</strong>.
-                Un fichier Blade respecte la nomenclature suivante : nomdufichier.blade.php
+                chose que de simple phrases.<br>
+                Dans Laravel, les vues sont sont gérées par le moteur de template <strong>Blade</strong> <a
+                    href="https://laravel.com/docs/5.4/blade" target="_blank"><i class="fa fa-book"></i></a>.
+                Un fichier Blade respecte la nomenclature suivante : <strong>nomdufichier.blade.php</strong>
             </p>
 
             <blockquote>
@@ -104,20 +114,30 @@ Route::get('/helloworld', function() {
             </code>
         </pre>
 
-            <p>Pour lier une route à une vue, il suffit de retourner la fonction view() en prenant en paramètre le nom
-                du
-                fichier blade (sans .blade.php) :</p>
+            <p>Pour lier une route à une vue, il suffit de retourner la méthode <strong>view()</strong> <a
+                    href="https://laravel.com/docs/5.4/helpers#method-view" target="_blank"><i
+                        class="fa fa-book"></i></a> en prenant en paramètre le nom
+                du fichier blade (sans .blade.php).<br>
+                Cette méthode va automatiquement chercher un fichier dans le répertoire de nos vues, <strong>/resources/views</strong>.
+            </p>
             <pre>
             <code class="language-php">
-return view('mavue.blade.php');
+// Retournera la vue resources/views/index.blade.php
+return view('index');
+
+// Retournera resources/views/users/index.blade.php
+return view('users.index');
             </code>
         </pre>
 
-            <p>Si vous souhaitez passer une variable à votre vue, il suffit d'utiliser la méthode compact :</p>
+            <p>Si vous souhaitez passer une variable à votre vue, il suffit d'utiliser la méthode compact (attention à
+                ne pas mettre le $ dans compact) :</p>
             <pre>
             <code class="language-php">
 $ecole = 'iim';
-return view('mavue.blade.php', compact('ecole');
+
+// La méthode compact permet d'envoyer une variable à votre vue afin de la traiter ou de l'afficher.
+return view('mavue', compact('ecole');
             </code>
         </pre>
             <div class="panel panel-primary">
@@ -130,8 +150,12 @@ return view('mavue.blade.php', compact('ecole');
                             affichez
                             "Institut de l'Internet et du Multimédia" en gras dans ce fichier.
                         </li>
-                        <li>Liez votre seconde route à un fichier blade.php que vous créérez, et <strong>affichez le
-                                paramètre dans le fichier blade</strong>.
+
+                        <br>
+
+                        <li>Liez votre seconde route à un autre fichier blade.php que vous créérez, et <strong>affichez
+                                le
+                                paramètre de la route dans ce fichier</strong>.
                         </li>
                     </ul>
                 </div>
@@ -143,33 +167,35 @@ return view('mavue.blade.php', compact('ecole');
             <h2>Exercice 3 : Blade</h2>
 
             <p>En PHP vous êtes habitués à utiliser des logiques conditionnelles (if, else, elseif) ou encore des
-                boucles
-                (while, for, foreach).</p>
+                boucles (while, for, foreach).</p>
             Dans Blade ces logiques sont également présentes mais ne s'écrivent pas tout à fait de la même manière.
+            <a href="https://laravel.com/docs/5.4/blade#control-structures" target="_blank"><i
+                    class="fa fa-book"></i></a>
 
             <blockquote>
-                En Blade, plus besoin de points-virgule à la fin de vos lignes !
+                En Blade, plus besoin de points-virgules à la fin de vos lignes !
             </blockquote>
 
-            <pre>
+        <pre>
             <code class="language-php">
 @if($mavariable > 2)
     // Si $mavariable est strictement supérieure à 2...
 @else
-    // Sinon afficher ceci...
+    // Sinon...
 @endif
             </code>
         </pre>
-            <p><em>Il en va de même pour @while / @endwhile, @for / @endfor, @foreach / @endforeach...</em></p>
+            <p><em>Il en va de même pour <strong>@while / @endwhile</strong>, <strong>@for / @endfor</strong>, <strong>@foreach
+                        / @endforeach</strong>...</em></p>
 
-            <p>Il existe même quelques variantes telles que @forelse et @unless.</p>
+            <p>Il existe même quelques variantes telles que <strong>@forelse</strong> et <strong>@unless</strong>.</p>
 
             <div class="panel panel-primary">
                 <div class="panel-heading">
                     <h3 class="panel-title">Exercice 3</h3>
                 </div>
                 <div class="panel-body">
-                    Entraînez-vous en faisant usage de :
+                    Entraînez-vous en faisant usage de ces logiques dans un de vos fichiers blade.:
                     <ul>
                         <li>@if / @else / @elseif / @endif</li>
                         <li>@while</li>
