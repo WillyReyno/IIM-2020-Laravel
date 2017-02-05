@@ -86,7 +86,7 @@ Route::get('/helloworld', function() {
 
         <!-- Views -->
         <div id="exo2">
-            <h2>Exercice 2 : Les vues</h2>
+            <h2>Exercice 2 : Les vues <a href="https://laravel.com/docs/5.4/views" target="_blank"><i class="fa fa-book"></i></a></h2>
 
             <p>Une fois vos routes créées, il vous faudra les lier à des <strong>vues</strong> afin d'afficher autre
                 chose que de simples phrases.<br>
@@ -158,7 +158,7 @@ return view('mavue', compact('ecole');
 
         <!-- Blade -->
         <div id="exo3">
-            <h2>Exercice 3 : Blade</h2>
+            <h2>Exercice 3 : Blade <a href="https://laravel.com/docs/5.4/blade" target="_blank"><i class="fa fa-book"></i></a></h2>
 
             <p>En PHP vous êtes habitués à utiliser des logiques conditionnelles (if, else, elseif) ou encore des
                 boucles (while, for, foreach).</p>
@@ -204,7 +204,7 @@ return view('mavue', compact('ecole');
         <!-- Templating -->
         <div id="exo4">
 
-            <h2>Exercice 4 : Blade Templating</h2>
+            <h2>Exercice 4 : Blade Templating <a href="https://laravel.com/docs/5.4/blade#template-inheritance" target="_blank"><i class="fa fa-book"></i></a></h2>
 
             <p>Allons un peu plus loin avec Blade et créons de vrais templates afin d'optimiser nos pages</p>
 
@@ -242,7 +242,7 @@ return view('mavue', compact('ecole');
                             </li>
                         </ul>
                         <br>
-                        <li>Créez deux nouveaux fichiers blade qui étendront de layout-test.blade.php et remplissez-y
+                        <li>Créez les routes <strong>/page1</strong> et <strong>/page2</strong> qui retourneront chacune une vue blade qui étendra de layout-test.blade.php et remplissez-y
                             les
                             <strong>@section</strong> / <strong>@endsection</strong> du titre et du contenu.
                         </li>
@@ -264,7 +264,7 @@ return view('mavue', compact('ecole');
                 <div class="panel-body">
                     <ul>
                         <li><strong>Générez votre système d'authentification</strong> à l'aide de la commande prévue à
-                            cet effet.
+                            cet effet. <a href="https://laravel.com/docs/5.4/authentication" target="_blank"><i class="fa fa-book"></i></a>
                         </li>
                         <br>
                         <li>Vous pouvez maintenant supprimer votre fichier layout-test.php.</li>
