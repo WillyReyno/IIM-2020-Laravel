@@ -11,7 +11,7 @@
 
         <!-- Models & Eloquent -->
         <div id="exo7">
-            <h2>Exercice 7 : Models et Eloquent</h2>
+            <h2>Exercice 7 : Models et Eloquent <a href="https://laravel.com/docs/5.4/eloquent" target="_blank"><i class="fa fa-book"></i></a></h2>
 
             <p>Vous allez maintenant devoir récupérer vos articles depuis votre base de données et les afficher dans vos
                 vues.<br>
@@ -56,7 +56,7 @@
 
         <!-- Pagination -->
         <div id="exo7bis">
-            <h2>Exercice 7.1 : Pagination</h2>
+            <h2>Exercice 7.1 : Pagination <a href="https://laravel.com/docs/5.4/pagination" target="_blank"><i class="fa fa-book"></i></a></h2>
 
             <p>Laravel permet de créer une pagination de manière très simple, un simple paramètre à ajouter à votre
                 requête Eloquent !</p>
@@ -75,7 +75,7 @@
 
         <!-- Relations -->
         <div id="exo7ter">
-            <h2>Exercice 7.2 : Relations</h2>
+            <h2>Exercice 7.2 : Relations <a href="https://laravel.com/docs/5.4/eloquent-relationships" target="_blank"><i class="fa fa-book"></i></a></h2>
 
             <p>Les relations vont permettre de définir les dépendances qu'auront nos objets.
 

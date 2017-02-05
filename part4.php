@@ -31,7 +31,7 @@
                             BDD pour vous simplifier la tâche.
                             <ul>
                                 <li>Le formulaire doit cibler la méthode store() de votre ArticleController</li>
-                                <li>Ajoutez bien le <strong>csrf_field()</strong> pour vous protéger des attaques CSRF.
+                                <li>Ajoutez bien le <strong>csrf_field()</strong> pour vous protéger des attaques CSRF <a href="https://laravel.com/docs/5.4/csrf" target="_blank"><i class="fa fa-book"></i></a>.
                                 </li>
                             </ul>
                         </li>
@@ -62,7 +62,7 @@
 
         <!-- Validations -->
         <div id="exo9">
-            <h2>Exercice 9 : Validations</h2>
+            <h2>Exercice 9 : Validations <a href="https://laravel.com/docs/5.4/validation" target="_blank"><i class="fa fa-book"></i></a></h2>
 
             <p>Les validations vont vous permettre de définir si vos champs sont obligatoires, s'ils doivent contenir un
                 minimum ou maximum de caractères, etc.</p>
@@ -114,12 +114,12 @@
                             <li>Récupérez les anciens champs à l'aide de la fonction <strong>old()</strong> dans les
                                 values des inputs
                             </li>
-                            <li>Ce formulaire devra cibler la méthode update() de l'ArticleController</li>
-                            <li>Pensez également à reprendre les validations mises en place dans store().</li>
+                            <li>Ce formulaire devra cibler la méthode <strong>update()</strong> de l'ArticleController</li>
+                            <li>Pensez également à reprendre les <strong>validations</strong> mises en place dans store().</li>
                         </ul>
 
-                        <li>Faites un autre formulaire qui contiendra un simple bouton et qui fera une requête
-                            DELETE vers la méthode destroy() de l'ArticleController.
+                        <li>Faites un autre formulaire qui contiendra un simple bouton et qui fera une <strong>requête
+                            DELETE</strong> vers la méthode <strong>destroy()</strong> de l'ArticleController.
                         </li>
 
                         <br>

@@ -11,7 +11,7 @@
 
         <!-- Resource Controllers -->
         <div id="exo5">
-            <h2>Exercice 5 : Resource Controllers </h2>
+            <h2>Exercice 5 : Resource Controllers <a href="https://laravel.com/docs/5.4/controllers#resource-controllers" target="_blank"><i class="fa fa-book"></i></a> </h2>
 
             <p>Vous allez maintenant créer une controller qui permettra de lier les routes avec les vues tout en
                 passant des données si cela est nécessaire.</p>
@@ -50,7 +50,7 @@
 
         <!-- Migrations -->
         <div id="exo6">
-            <h2>Exercice 6 : Les migrations</h2>
+            <h2>Exercice 6 : Les migrations <a href="https://laravel.com/docs/5.4/migrations" target="_blank"><i class="fa fa-book"></i></a></h2>
 
 
             <div class="alert alert-warning">
@@ -130,7 +130,7 @@ MAC_UNIX_SOCKET=/Applications/MAMP/tmp/mysql/mysql.sock
 
         <!-- Clés Etrangères -->
         <div id="exo6bis">
-            <h2>Exercice 6.1 : Clés étrangères</h2>
+            <h2>Exercice 6.1 : Clés étrangères <a href="https://laravel.com/docs/5.4/migrations#foreign-key-constraints" target="_blank"><i class="fa fa-book"></i></a></h2>
 
             <p>Tout comme en SQL, les clés étrangères permettent de lier deux tables entre elles grâce à un champ
                 commun.</p>
@@ -160,7 +160,7 @@ MAC_UNIX_SOCKET=/Applications/MAMP/tmp/mysql/mysql.sock
 
         <!-- Seeders & Factories -->
         <div id="exo6ter">
-            <h2>Exercice 6.2 : Seeders & Factories</h2>
+            <h2>Exercice 6.2 : Seeders & Factories <a href="https://laravel.com/docs/5.4/seeding#using-model-factories" target="_blank"><i class="fa fa-book"></i></a></h2>
 
             <p>Vous allez maintenant devoir remplir vos tables avec du contenu, et c'est à cela que servent les Seeders et
                 les Model Factories.</p>
