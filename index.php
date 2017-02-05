@@ -16,12 +16,12 @@
 
             <!-- TODO Intro -->
 
-            <p>Au cours de cette vingtaine d'exercices vous apprendrez à créer un blog avec Laravel
-                (publication d'articles, édition, suppression...).</p>
+            <p>Au cours de cette vingtaine d'exercices vous apprendrez à créer un blog avec Laravel de A à Z
+                (publication et affichage d'articles, édition, suppression...).</p>
 
             <div class="alert alert-info">Afin de vous aider nous avons ajouté des liens vers la <a
                     href="https://laravel.com/docs/5.4">documentation officielle de Laravel</a>, cette
-                dernière étant extrêmement bien rédigée et facile à comprendre, nous vous invitons à vous en servir dès
+                dernière étant extrêmement complète et facile à comprendre, nous vous invitons à vous en servir dès
                 que vous avez un doute où que vous souhaitez revoir un point spécifique.<br>
                 Vous trouverez les liens vers la documentation en cliquant sur les icônes présentes sur ces pages : <a
                     href="#"><i class="fa fa-book"></i></a>.
@@ -68,9 +68,6 @@ Route::get('/helloworld', function() {
                     href="https://laravel.com/docs/5.4/routing#required-parameters" target="_blank"><i
                         class="fa fa-book"></i></a> dans une route afin d'afficher du contenu
                 dynamique.<br>
-                Ces paramètres se définissent dans le chemin de la route à l'aide d'accolades (ex :
-                <strong>{monparametre}</strong>) et se passent en paramètre dans la fonction sous forme de variable
-                (<strong>$monparametre</strong>).</p>
 
             <div class="panel panel-primary">
                 <div class="panel-heading">
@@ -94,8 +91,8 @@ Route::get('/helloworld', function() {
             <h2>Exercice 2 : Les vues</h2>
 
             <p>Une fois vos routes créées, il vous faudra les lier à des <strong>vues</strong> afin d'afficher autre
-                chose que de simple phrases.<br>
-                Dans Laravel, les vues sont sont gérées par le moteur de template <strong>Blade</strong> <a
+                chose que de simples phrases.<br>
+                Dans Laravel, les vues sont gérées par le moteur de template <strong>Blade</strong> <a
                     href="https://laravel.com/docs/5.4/blade" target="_blank"><i class="fa fa-book"></i></a>.
                 Un fichier Blade respecte la nomenclature suivante : <strong>nomdufichier.blade.php</strong>
             </p>
@@ -104,7 +101,7 @@ Route::get('/helloworld', function() {
                 Les vues sont à placer dans le dossier <strong>/resources/views</strong>.
             </blockquote>
 
-            <p>Les fichiers blades ont leur propre syntaxe, inutile d'utiliser des balises PHP, ici tout se faire entre
+            <p>Les fichiers blades ont leur propre syntaxe, inutile d'utiliser des balises PHP, ici tout se fait entre
                 double accolades.</p>
 
             <p>Afficher une variable dans un fichier Blade : </p>
@@ -154,8 +151,7 @@ return view('mavue', compact('ecole');
                         <br>
 
                         <li>Liez votre seconde route à un autre fichier blade.php que vous créérez, et <strong>affichez
-                                le
-                                paramètre de la route dans ce fichier</strong>.
+                                le paramètre de la route dans ce fichier</strong>.
                         </li>
                     </ul>
                 </div>
@@ -176,7 +172,7 @@ return view('mavue', compact('ecole');
                 En Blade, plus besoin de points-virgules à la fin de vos lignes !
             </blockquote>
 
-        <pre>
+            <pre>
             <code class="language-php">
 @if($mavariable > 2)
     // Si $mavariable est strictement supérieure à 2...
@@ -219,7 +215,7 @@ return view('mavue', compact('ecole');
             <pre>
             <code class="language-markup">
 &lt;!DOCTYPE html>
-&lt;html lang="en">
+&lt;html lang="fr">
 &lt;head>
     &lt;meta charset="UTF-8">
     &lt;title>Title&lt;/title>
@@ -238,64 +234,67 @@ return view('mavue', compact('ecole');
                     <h3 class="panel-title">Exercice 4</h3>
                 </div>
                 <div class="panel-body">
-                    Entraînez-vous en faisant usage de :
                     <ul>
-                        <li>Créez un fichier layout.blade.php qui contiendra le HTML ci-dessus.</li>
+                        <li>Créez un fichier <strong>layout-test.blade.php</strong> qui contiendra le HTML ci-dessus.
+                        </li>
+                        <br>
                         <li>Dans ce fichier layout :</li>
                         <ul>
-                            <li>Remplacez le title par @yield qui permettra de le définir selon la page où l'on se
-                                trouve.
+                            <li>Remplacez le title par <strong>@yield</strong> qui permettra de définir un titre
+                                différent par page.
                             </li>
                             <li>Remplacez le commentaire par un @yield qui définira où sera écrit le contenu de votre
                                 page.
                             </li>
                         </ul>
-                        <li>Créez deux nouveaux fichiers blade qui étendront de layout.blade.php et remplissez-y les
-                            section
-                            du titre et du contenu.
+                        <br>
+                        <li>Créez deux nouveaux fichiers blade qui étendront de layout-test.blade.php et remplissez-y
+                            les
+                            <strong>@section</strong> / <strong>@endsection</strong> du titre et du contenu.
                         </li>
                     </ul>
                 </div>
             </div>
         </div>
 
-        <!-- TODO Vérifier qu'on ne fait pas le Auth avant le templating ?
-        TODO et garder l'inté d'un thème complet pour le rendu -->
-
         <!-- Templating complet -->
         <div id="exo4bis">
             <h2>Exercice 4.1 : Un template un peu plus complet ! </h2>
+
+            <p>Nous allons maintenant préparer nos templates pour la suite des exercices.</p>
 
             <div class="panel panel-primary">
                 <div class="panel-heading">
                     <h3 class="panel-title">Exercice 4.1</h3>
                 </div>
                 <div class="panel-body">
-                    Entraînez-vous en faisant usage de :
                     <ul>
-                        <li>Trouvez un template HTML ou Bootstrap sur internet et adaptez-le afin qu'il vous serve de
-                            template principal (layout.blade.php)
+                        <li><strong>Générez votre système d'authentification</strong> à l'aide de la commande prévue à
+                            cet effet.
                         </li>
-                        <li>Définissez les zones qui seront réutilisés (contenu de la page, title, etc) et faites-en des
-                            @yield)
-                        </li>
-                        <li>Dans un dossier resources/posts créez les fichiers : create.blade.php, edit.blade.php,
-                            index.blade.php et show.blade.php
+                        <br>
+                        <li>Vous pouvez maintenant supprimer votre fichier layout-test.php.</li>
+                        <br>
+                        <li>Dans un dossier <strong>resources/articles</strong> créez les fichiers suivants :
                         </li>
                         <ul>
-                            <li>- Create correspond à votre formulaire de publication d'articles</li>
-                            <li>- Edit correspond à votre formulaire de modification d'articles</li>
-                            <li>- Index correspond à votre liste d'articles</li>
-                            <li>- Show correspond à la page d'un article</li>
+                            <li><strong>create.blade.php</strong> correspond à votre formulaire de publication
+                                d'articles
+                            </li>
+                            <li><strong>edit.blade.php</strong> correspond à votre formulaire de modification d'articles
+                            </li>
+                            <li><strong>index.blade.php</strong> correspond à votre liste d'articles</li>
+                            <li><strong>show.blade.php</strong> correspond à la page d'un article</li>
                         </ul>
+                        <li>Ces nouveaux templates devront étendre du layout créé lors de la génération du système
+                            d'authentification.
+                        </li>
                     </ul>
                 </div>
             </div>
-
         </div>
 
-
-        <a href="/day-2" class="pull-right btn btn-info">Passer à la suite</a>
+        <a href="part2.php" class="pull-right btn btn-info next-step">Partie 2</a>
 
     </div>
 

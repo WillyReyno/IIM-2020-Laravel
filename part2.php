@@ -2,50 +2,47 @@
 
 <div class="blog-header">
     <h1 class="blog-title">Laravel - Partie 2</h1>
-    <p class="lead blog-description">...</p>
+    <p class="lead blog-description">Préparation des controllers et de la base de données</p>
 </div>
 
 <div class="row">
 
     <div class="col-sm-8 blog-main">
 
-        <!-- Controllers -->
-        <div id="exo5">
-            <h2>Exercice 5 : Controllers</h2>
-
-            <div class="panel panel-primary">
-                <div class="panel-heading">
-                    <h3 class="panel-title">Exercice 5</h3>
-                </div>
-                <div class="panel-body">
-                    <ul>
-                        <li>Création d'un TestController</li>
-                        <li>Créez une méthode pour chaque route précédemment créée (index, show, create, edit)</li>
-                        <li>Placez le code que vous aviez fait dans vos routes directement dans ces méthodes</li>
-                        <li>Reliez toutes les routes aux méthodes du controller</li>
-                    </ul>
-                </div>
-            </div>
-
-        </div>
-
         <!-- Resource Controllers -->
-        <div id="exo5bis">
-            <h2>Exercice 5.1 : Resource Controllers </h2>
+        <div id="exo5">
+            <h2>Exercice 5 : Resource Controllers </h2>
+
+            <p>Nous allons maintenant créer une controller qui permettra de lier les routes avec les vues tout en
+                passant des données si cela est nécessaire.</p>
 
             <div class="panel panel-primary">
                 <div class="panel-heading">
                     <h3 class="panel-title">Exercice 5.1</h3>
                 </div>
                 <div class="panel-body">
-                    <p>A l'aide d'une ligne de commande, crééz un PostController
-                        qui sera prérempli de toutes les méthodes dont on aura besoin.</p>
                     <ul>
-                        <li>index, create, store, show, edit, update, destroy (les fonctions store, update et destroy ne
-                            doivent rien retourner pour le moment)
+                        <li>A l'aide d'une ligne de commande, crééz un <strong>ArticleController</strong>
+                            qui sera prérempli avec les méthodes : <strong>index</strong>, <strong>create</strong>,
+                            <strong>store</strong>,
+                            <strong>show</strong>, <strong>edit</strong>, <strong>update</strong> et
+                            <strong>destroy</strong>.
                         </li>
-                        <li>créez une route resource qui liera en une ligne vos routes /posts avec ce controller.</li>
-                        <li>vous pouvez supprimer le TestController.</li>
+
+                        <br>
+
+                        <li>Reliez les méthodes <strong>index</strong>, <strong>create</strong>, <strong>show</strong>
+                            et
+                            <strong>edit</strong> aux vues que vous avez créées dans les exercices précédents (pour le
+                            moment, les méthodes store, update et destroy doivent rester vide).
+                        </li>
+
+                        <br>
+
+                        <li>Créez une route resource <strong>/article</strong> qui permettra de faire la liaison avec
+                            votre
+                            ArticleController.
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -55,13 +52,42 @@
         <div id="exo6">
             <h2>Exercice 6 : Les migrations</h2>
 
+
+            <div class="alert alert-warning">
+                Pour les <strong>utilisateurs de Mac</strong>, pensez à renseigner l'unix socket.
+                dans le fichier <strong>.env</strong> et <strong>config/database.php</strong> avant de commencer
+                l'exercice
+            </div>
+
+            <pre>
+                <code class="language-php">
+                // .env
+MAC_UNIX_SOCKET=/Applications/MAMP/tmp/mysql/mysql.sock
+                </code>
+            </pre>
+
+            <pre>
+                <code class="language-php">
+                // config/database.php
+'mysql' => [
+    // ...
+    'unix_socket' => env('MAC_UNIX_SOCKET'),
+    // ...
+],
+                </code>
+            </pre>
+
             <!-- TODO faire une liste migrate, refresh, reset etc ? (sauf si c'est dans le cours) -->
 
             <div class="alert alert-warning">
-                Pour toutes les personnes ayant MySQL < x.xx ajoutez la ligne suivante dans la fonction boot() du
+                Si vous possédez une version de MySQL inférieure à la 5.77 vous obtiendrez une erreur lors de vos
+                migrations.
+
+                Pour la corriger, il suffit d'ajouter cette ligne dans la fonction boot() du
                 fichier
-                app/Providers/AppServiceProvider.php (et n'oubliez pas d'importer la class Schema (alt + click sur
-                Schema)
+                <strong>app/Providers/AppServiceProvider.php</strong> <br>(et n'oubliez pas d'importer la class Schema
+                (alt + click sur
+                Schema))
             </div>
 
             <pre>
@@ -71,27 +97,7 @@
                 }
             </code>
         </pre>
-            <div class="alert alert-warning">
-                Pour les <strong>utilisateurs de Mac</strong>, pensez à renseigner l'unix socket.
-                dans le fichier .env et config/database.php
-            </div>
-            <pre>
-            <code class="language-php">
-                // .env
-MAC_UNIX_SOCKET=/Applications/MAMP/tmp/mysql/mysql.sock
-            </code>
-        </pre>
 
-            <pre>
-            <code class="language-php">
-                // config/database.php
-'mysql' => [
-    // ...
-    'unix_socket' => env('MAC_UNIX_SOCKET'),
-    // ...
-],
-            </code>
-        </pre>
 
             <div class="panel panel-primary">
                 <div class="panel-heading">
@@ -99,11 +105,27 @@ MAC_UNIX_SOCKET=/Applications/MAMP/tmp/mysql/mysql.sock
                 </div>
                 <div class="panel-body">
                     <ul>
-                        <li>Créez une migration pour la table "posts" qui contiendra nos articles</li>
-                        <li>Via les fichiers de migrations, ajoutez des champs : title, content, user_id (choisissant
-                            bien les types de colonnes à utiliser)
+                        <li>Créez une nouvelle migration pour la table <strong>articles</strong> qui contiendra nos
+                            articles
                         </li>
-                        <li>Lancez votre migration</li>
+
+                        <br>
+
+                        <li>Dans le fichier de migration créé, ajoutez les champs suivants :
+                            <ul>
+                                <li><strong>title</strong>, qui contiendra le titre de nos articles.</li>
+                                <li><strong>content</strong>, qui contiendra le contenu de nos articles.</li>
+                                <li><strong>user_id</strong>, qui contiendra l'id de l'auteur de l'article.</li>
+                                <em>(Choisissez bien les types de colonnes que vous utiliserez)</em>
+                                </li>
+
+                            </ul>
+
+                            <br>
+
+                        <li>Vous pouvez désormais lancer vos migrations et vérifier en base de données si tout
+                            est OK. <br> Le cas échéant, faites un rollback ou un reset puis recommencez !
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -113,11 +135,8 @@ MAC_UNIX_SOCKET=/Applications/MAMP/tmp/mysql/mysql.sock
         <div id="exo6bis">
             <h2>Exercice 6.1 : Clés étrangères</h2>
 
-            <pre>
-            <code class="language-php">
-                // Code clé étrangère
-            </code>
-        </pre>
+            <p>Tout comme en SQL, les clés étrangères permettent de lier deux tables entre elles grâce à un champ
+                commun.</p>
 
             <div class="panel panel-primary">
                 <div class="panel-heading">
@@ -125,7 +144,18 @@ MAC_UNIX_SOCKET=/Applications/MAMP/tmp/mysql/mysql.sock
                 </div>
                 <div class="panel-body">
                     <ul>
-                        <li>Définissez une clé étrangère liant la table user à la table posts</li>
+                        <li>Créez une nouvelle migration dans laquelle vous renseignerez vos clés étrangères</li>
+
+                        <br>
+
+                        <li>Dans cette migration, définissez la liaison entre la table <strong>users</strong> et la
+                            table
+                            <strong>articles</strong>.
+                        </li>
+
+                        <br>
+
+                        <li>Lancez la migration pour que la modification soit prise en compte.</li>
                     </ul>
                 </div>
             </div>
@@ -135,11 +165,8 @@ MAC_UNIX_SOCKET=/Applications/MAMP/tmp/mysql/mysql.sock
         <div id="exo6ter">
             <h2>Exercice 6.2 : Seeders & Factories</h2>
 
-            <pre>
-            <code class="language-php">
-                // Seeders
-            </code>
-        </pre>
+            <p>Vous allez maintenant devoir remplir vos tables avec du contenu, et c'est à ça que servent les Seeders et
+                les Model Factories</p>
 
             <div class="panel panel-primary">
                 <div class="panel-heading">
@@ -148,24 +175,58 @@ MAC_UNIX_SOCKET=/Applications/MAMP/tmp/mysql/mysql.sock
                 <div class="panel-body">
                     <ul>
                         <li>Dans le fichier database/factories/ModelFactory.php, dupliquez le code existant et
-                            adaptez-le à votre table posts.
+                            adaptez-le à votre table articles.
                         </li>
+                        <br>
+
                         <li>Les types de faux contenus proposés par le package Faker sont disponibles sur
                             <a href="https://github.com/fzaninotto/Faker">
                                 le repository du package</a>.
                         </li>
-                        <p>Dans votre fichier PostsTableSeeder faites appel à la méthode Factory en lui passant en
-                            paramètre votre modèle + le nombre d'itérations voulues.</p>
-                        <li>Appelez ensuite la class PostsTableSeeder dans votre DatabaseSeeder.php</li>
-                        <li>Lancez la ligne de commander d'execution des seeders !</li>
+
+                        <br>
+
+                        <li>Dans votre fichier ArticlesTableSeeder faites appel à la méthode <strong>factory()</strong>
+                            en lui passant en paramètre le namespace de votre modèle ainsi que le nombre d'itérations
+                            voulues.
+                        </li>
+
+                        <br>
+
+                        <li>Appelez ensuite la class ArticlesTableSeeder dans votre DatabaseSeeder.php</li>
+
+                        <br>
+
+                        <li>Lancez les seeders depuis votre ligne de commande !</li>
                     </ul>
                 </div>
             </div>
         </div>
 
-        <!-- Authentification -->
         <div id="auth">
             <h2>Authentification</h2>
+
+            <p>Maintenant que vos tables sont bien migrées et seedées, vous allez pouvoir vous inscrire sur votre site
+                à l'aide du système d'authentification créé dans l'exercice 4.1 !</p>
+
+            <p>Une fois connecté, vous aurez accès à de nouvelles fonctions vous permettant de tester si oui ou non
+                votre utilisateur est connecté.</p>
+
+            <pre>
+                <code class="language-php">
+                    // Permet de vérifier si l'utilisateur est connecté
+                    Auth::check()
+
+                    // Permet de vérifier si l'utilisateur est invité
+                    Auth::guest()
+
+                    // Toutes les informations de l'utilisateur connecté sont stockées dans :
+                    Auth::user()
+
+                    // Exemple, pour récupérer le nom de l'utilisateur :
+                    Auth::user()->name
+                </code>
+            </pre>
 
             <div class="panel panel-primary">
                 <div class="panel-heading">
@@ -173,16 +234,25 @@ MAC_UNIX_SOCKET=/Applications/MAMP/tmp/mysql/mysql.sock
                 </div>
                 <div class="panel-body">
                     <ul>
-                        <li>Faire make:auth (forcément après les migrations d'users)</li>
-                        <li>S'inscrire sur son site</li>
-                        <!-- TODO parler des auth:check()) -->
-                        <li>Afficher quelque chose uniquement lorsque l'on est connecté</li>
+                        <li>Inscrivez-vous sur votre site via le formulaire prévu à cet effet</li>
+
+                        <br>
+
+                        <li>Dans une de vos vues, ajoutez un message qui ne sera visible que par un utilisateur
+                            connecté.
+                        </li>
+
+                        <br>
+
+                        <li>Créez une page profil <strong>/user</strong> de l'utilisateur connecté où seront listés son nom, son e-mail et sa
+                            date d'inscription.
+                        </li>
                     </ul>
                 </div>
             </div>
         </div>
 
-        <a href="part3.php" class="pull-right btn btn-info">Passer à la suite</a>
+        <a href="part3.php" class="pull-right btn btn-info next-step">Partie 3</a>
 
     </div><!-- /.blog-main -->
 
@@ -191,8 +261,7 @@ MAC_UNIX_SOCKET=/Applications/MAMP/tmp/mysql/mysql.sock
             <div class="sidebar-module sidebar-module-inset">
                 <h4>Menu</h4>
                 <ul>
-                    <li><a href="#exo5">Exercice 5 : Controllers</a></li>
-                    <li><a href="#exo5bis">Exercice 5.1 : Resource Controllers</a></li>
+                    <li><a href="#exo5">Exercice 5 : Resource Controller</a></li>
                     <li><a href="#exo6">Exercice 6 : Migrations</a></li>
                     <li><a href="#exo6bis">Exercice 6.1 : Clés étrangères</a></li>
                     <li><a href="#exo6ter">Exercice 6.2 : Seeders</a></li>
