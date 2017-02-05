@@ -111,14 +111,14 @@
                         </li>
 
                         <ul>
-                            <li>Récupérez les anciens champs à l'aide de la fonction <strong>old()</strong> dans les
-                                values des inputs
-                            </li>
+                            <li>Récupérez les anciens champs dans les values des inputs</li>
                             <li>Ce formulaire devra cibler la méthode <strong>update()</strong> de l'ArticleController</li>
                             <li>Pensez également à reprendre les <strong>validations</strong> mises en place dans store().</li>
                         </ul>
 
-                        <li>Faites un autre formulaire qui contiendra un simple bouton et qui fera une <strong>requête
+                        <br>
+
+                        <li>Faites un formulaire sur <strong>show.blade.php</strong> contiendra un simple bouton et qui fera une <strong>requête
                             DELETE</strong> vers la méthode <strong>destroy()</strong> de l'ArticleController.
                         </li>
 
@@ -173,7 +173,7 @@
 
             <div class="panel panel-primary">
                 <div class="panel-heading">
-                    <h3 class="panel-title">Exercice 11</h3>
+                    <h3 class="panel-title">Exercice 11 <a href="https://laravel.com/docs/5.4/middleware" target="_blank"><i class="fa fa-book"></i></a></h3>
                 </div>
                 <div class="panel-body">
                     <ul>
@@ -195,7 +195,7 @@
                             <br>
 
                             <li>Ce champ permettra également de faire apparaître certains éléments uniquement aux
-                                administrateurs (ex : bouton de suppression, de modification...)
+                                administrateurs (ex : bouton de suppression)
                             </li>
                         </ul>
                     </ul>
