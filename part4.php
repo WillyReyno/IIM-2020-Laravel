@@ -28,7 +28,7 @@
 
                         <li>Ce formulaire devra comprendre les champs nécessaires à la publication d'un article.
                             Veillez à ce que les name de ces inputs correspondent aux noms que vous leur avez donné en
-                            BDD pour simplifier la tâche.
+                            BDD pour vous simplifier la tâche.
                             <ul>
                                 <li>Le formulaire doit cibler la méthode store() de votre ArticleController</li>
                                 <li>Ajoutez bien le <strong>csrf_field()</strong> pour vous protéger des attaques CSRF.
@@ -65,7 +65,7 @@
             <h2>Exercice 9 : Validations</h2>
 
             <p>Les validations vont vous permettre de définir si vos champs sont obligatoires, s'ils doivent contenir un
-                minimum ou maximum de caractères etc.</p>
+                minimum ou maximum de caractères, etc.</p>
 
             <div class="panel panel-primary">
                 <div class="panel-heading">
@@ -75,7 +75,7 @@
                     <ul>
                         <li>Ajoutez des règles de validation à votre formulaire dans la méthode <strong>store()</strong>
                             de votre
-                            ArticleController
+                            ArticleController :
                         </li>
                         <ul>
                             <li>Le titre doit être un champ requis</li>

@@ -22,8 +22,8 @@
                 </div>
                 <div class="panel-body">
                     <ul>
-                        <li>A l'aide d'une ligne de commande, créez un <strong>ArticleController</strong>
-                            qui sera prérempli avec les méthodes : <strong>index()</strong>, <strong>create()</strong>,
+                        <li>À l'aide d'une ligne de commande, créez un <strong>ArticleController</strong>
+                            qui sera pré-rempli avec les méthodes : <strong>index()</strong>, <strong>create()</strong>,
                             <strong>store()</strong>,
                             <strong>show()</strong>, <strong>edit()</strong>, <strong>update()</strong> et
                             <strong>destroy()</strong>.
@@ -78,7 +78,7 @@ MAC_UNIX_SOCKET=/Applications/MAMP/tmp/mysql/mysql.sock
             </pre>
 
             <div class="alert alert-warning">
-                Si vous possédez une version de MySQL inférieure à la 5.77 vous obtiendrez une erreur lors de vos
+                Si vous possédez une version de MySQL inférieure à la 5.77, vous obtiendrez une erreur lors de vos
                 migrations.
 
                 Pour la corriger, il suffit d'ajouter cette ligne dans la méthode boot() du fichier
@@ -103,7 +103,7 @@ MAC_UNIX_SOCKET=/Applications/MAMP/tmp/mysql/mysql.sock
                 <div class="panel-body">
                     <ul>
                         <li>Créez une nouvelle migration pour la table <strong>articles</strong> qui contiendra nos
-                            articles
+                            articles.
                         </li>
 
                         <br>
@@ -162,8 +162,8 @@ MAC_UNIX_SOCKET=/Applications/MAMP/tmp/mysql/mysql.sock
         <div id="exo6ter">
             <h2>Exercice 6.2 : Seeders & Factories</h2>
 
-            <p>Vous allez maintenant devoir remplir vos tables avec du contenu, et c'est à ça que servent les Seeders et
-                les Model Factories</p>
+            <p>Vous allez maintenant devoir remplir vos tables avec du contenu, et c'est à cela que servent les Seeders et
+                les Model Factories.</p>
 
             <div class="panel panel-primary">
                 <div class="panel-heading">
@@ -206,7 +206,7 @@ MAC_UNIX_SOCKET=/Applications/MAMP/tmp/mysql/mysql.sock
             <p>Maintenant que vos tables ont été migrées et seedées, vous allez pouvoir vous inscrire sur votre site
                 à l'aide du système d'authentification créé dans l'exercice 4.1 !</p>
 
-            <p>Une fois connecté, vous aurez accès à de nouvelles fonctions vous permettant de tester si oui ou non
+            <p>Une fois connecté.e, vous aurez accès à de nouvelles fonctions vous permettant de tester si oui ou non
                 votre utilisateur est connecté.</p>
 
             <pre>

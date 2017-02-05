@@ -17,11 +17,11 @@
             <p>Au cours de cette vingtaine d'exercices, vous apprendrez à créer un blog avec Laravel de A à Z
                 (publication et affichage d'articles, édition, suppression...).</p>
 
-            <div class="alert alert-info">Afin de vous aider nous avons ajouté des liens vers la <a
-                    href="https://laravel.com/docs/5.4">documentation officielle de Laravel</a>, cette
+            <div class="alert alert-info">Afin de vous aider, nous avons ajouté des liens vers la <a
+                    href="https://laravel.com/docs/5.4">documentation officielle de Laravel</a>. Cette
                 dernière étant extrêmement complète et facile à comprendre, nous vous invitons à vous en servir dès
-                que vous avez un doute où que vous souhaitez revoir un point spécifique.<br>
-                Vous trouverez les liens vers la documentation en cliquant sur les icônes présentes sur ces pages : <a
+                que vous avez un doute ou que vous souhaitez revoir un point spécifique.<br>
+                Vous trouverez les liens vers la documentation en cliquant sur ces icônes : <a
                     href="#"><i class="fa fa-book"></i></a>.
             </div>
 
@@ -99,7 +99,7 @@ Route::get('/helloworld', function() {
                 Les vues sont à placer dans le dossier <strong>/resources/views</strong>.
             </blockquote>
 
-            <p>Les fichiers blades ont leur propre syntaxe, inutile d'utiliser des balises PHP, ici tout se fait entre
+            <p>Les fichiers blades ont leur propre syntaxe : inutile d'utiliser des balises PHP, ici tout se fait entre
                 double accolades.</p>
 
             <p>Afficher une variable dans un fichier Blade : </p>
@@ -160,7 +160,7 @@ return view('mavue', compact('ecole');
         <div id="exo3">
             <h2>Exercice 3 : Blade</h2>
 
-            <p>En PHP vous êtes habitués à utiliser des logiques conditionnelles (if, else, elseif) ou encore des
+            <p>En PHP, vous êtes habitués à utiliser des logiques conditionnelles (if, else, elseif) ou encore des
                 boucles (while, for, foreach).</p>
             Dans Blade ces logiques sont également présentes, mais ne s'écrivent pas tout à fait de la même manière.
             <a href="https://laravel.com/docs/5.4/blade#control-structures" target="_blank"><i
@@ -206,7 +206,7 @@ return view('mavue', compact('ecole');
 
             <h2>Exercice 4 : Blade Templating</h2>
 
-            <p>Allons un peu plus loin avec Blade et créons de vrais templates afin d'optimiser nos pages</p>
+            <p>Allons un peu plus loin avec Blade et créons de vrais templates afin d'optimiser nos pages.</p>
 
             <pre>
             <code class="language-markup">

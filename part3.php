@@ -31,7 +31,7 @@
                         <li>Maintenant, utilisez votre model afin de récupérer vos données :</li>
 
                         <ul>
-                            <li>Récupérez la liste de vos articles complète dans la méthode <strong>index()</strong> de
+                            <li>Récupérez la liste complète de vos articles  dans la méthode <strong>index()</strong> de
                                 votre controller et
                                 affichez-la dans la vue articles/index.blade.php
                             </li>
@@ -97,7 +97,7 @@
 
                         <br>
 
-                        <li>Sur la route /user créez plus tôt, affichez la liste des articles qu'il a publié.</li>
+                        <li>Sur la route /user crée plus tôt, affichez la liste des articles qu'il a publié.</li>
                     </ul>
                 </div>
             </div>
