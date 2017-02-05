@@ -11,7 +11,8 @@
 
         <!-- Models & Eloquent -->
         <div id="exo7">
-            <h2>Exercice 7 : Models et Eloquent <a href="https://laravel.com/docs/5.4/eloquent" target="_blank"><i class="fa fa-book"></i></a></h2>
+            <h2>Exercice 7 : Models et Eloquent <a href="https://laravel.com/docs/5.4/eloquent" target="_blank"><i
+                        class="fa fa-book"></i></a></h2>
 
             <p>Vous allez maintenant devoir récupérer vos articles depuis votre base de données et les afficher dans vos
                 vues.<br>
@@ -22,33 +23,23 @@
                 </div>
                 <div class="panel-body">
                     <ul>
-                        <li>Créez un model <strong>Article</strong> et renseignez les champs <strong>$fillable</strong>
-                            dans un array protected.
+                        <li>Récupérez la liste complète de vos articles dans la méthode <strong>index()</strong> de
+                            votre controller et
+                            affichez-la dans la vue articles/index.blade.php
                         </li>
 
                         <br>
 
-                        <li>Maintenant, utilisez votre model afin de récupérer vos données :</li>
+                        <li>Récupérez l'article lié à l'<strong>id</strong> passé en paramètre de la méthode
+                            <strong>show()</strong> et affichez-le dans la vue show.blade.php
+                        </li>
 
-                        <ul>
-                            <li>Récupérez la liste complète de vos articles  dans la méthode <strong>index()</strong> de
-                                votre controller et
-                                affichez-la dans la vue articles/index.blade.php
-                            </li>
+                        <br>
 
-                            <br>
-
-                            <li>Récupérez l'article lié à l'<strong>id</strong> passé en paramètre de la méthode
-                                <strong>show()</strong> et affichez-le dans la vue show.blade.php
-                            </li>
-
-                            <br>
-
-                            <li>
-                                Récupérez l'article lié à l'<strong>id</strong> passé en paramètre de la méthode
-                                <strong>edit()</strong> et passez-le à la vue edit.blade.php (sans l'afficher)
-                            </li>
-                        </ul>
+                        <li>
+                            Récupérez l'article lié à l'<strong>id</strong> passé en paramètre de la méthode
+                            <strong>edit()</strong> et passez-le à la vue edit.blade.php (sans l'afficher)
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -56,7 +47,8 @@
 
         <!-- Pagination -->
         <div id="exo7bis">
-            <h2>Exercice 7.1 : Pagination <a href="https://laravel.com/docs/5.4/pagination" target="_blank"><i class="fa fa-book"></i></a></h2>
+            <h2>Exercice 7.1 : Pagination <a href="https://laravel.com/docs/5.4/pagination" target="_blank"><i
+                        class="fa fa-book"></i></a></h2>
 
             <p>Laravel permet de créer une pagination de manière très simple, un simple paramètre à ajouter à votre
                 requête Eloquent !</p>
@@ -75,7 +67,8 @@
 
         <!-- Relations -->
         <div id="exo7ter">
-            <h2>Exercice 7.2 : Relations <a href="https://laravel.com/docs/5.4/eloquent-relationships" target="_blank"><i class="fa fa-book"></i></a></h2>
+            <h2>Exercice 7.2 : Relations <a href="https://laravel.com/docs/5.4/eloquent-relationships"
+                                            target="_blank"><i class="fa fa-book"></i></a></h2>
 
             <p>Les relations vont permettre de définir les dépendances qu'auront nos objets.
 

@@ -270,7 +270,7 @@ return view('mavue', compact('ecole');
                             cet effet. <a href="https://laravel.com/docs/5.4/authentication" target="_blank"><i class="fa fa-book"></i></a>
                         </li>
                         <br>
-                        <li>Dans un dossier <strong>resources/articles</strong> créez les fichiers suivants :
+                        <li>Dans un dossier <strong>resources/views/articles</strong> créez les fichiers suivants :
                         </li>
                         <ul>
                             <li><strong>create.blade.php</strong> correspond à votre formulaire de publication

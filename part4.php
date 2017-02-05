@@ -80,7 +80,7 @@
                         <ul>
                             <li>Le titre doit être un champ requis</li>
                             <li>Le contenu doit être un champ requis</li>
-                            <li>Paramétrez également les erreurs liées à ces validations</li>
+                            <li>Paramétrez également les messages d'erreur liés à ces validations</li>
                         </ul>
                         <li>Créez un nouveau fichier <strong>messages/errors.blade.php</strong> dans lequel vous
                             afficherez les erreurs

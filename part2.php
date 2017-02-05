@@ -11,14 +11,16 @@
 
         <!-- Resource Controllers -->
         <div id="exo5">
-            <h2>Exercice 5 : Resource Controllers <a href="https://laravel.com/docs/5.4/controllers#resource-controllers" target="_blank"><i class="fa fa-book"></i></a> </h2>
+            <h2>Exercice 5 : Resource Controllers <a
+                    href="https://laravel.com/docs/5.4/controllers#resource-controllers" target="_blank"><i
+                        class="fa fa-book"></i></a></h2>
 
             <p>Vous allez maintenant créer une controller qui permettra de lier les routes avec les vues tout en
                 passant des données si cela est nécessaire.</p>
 
             <div class="panel panel-primary">
                 <div class="panel-heading">
-                    <h3 class="panel-title">Exercice 5.1</h3>
+                    <h3 class="panel-title">Exercice 5</h3>
                 </div>
                 <div class="panel-body">
                     <ul>
@@ -31,7 +33,8 @@
 
                         <br>
 
-                        <li>Reliez les méthodes <strong>index()</strong>, <strong>create()</strong>, <strong>show()</strong>
+                        <li>Reliez les méthodes <strong>index()</strong>, <strong>create()</strong>,
+                            <strong>show()</strong>
                             et
                             <strong>edit()</strong> aux vues que vous avez créées dans les exercices précédents (pour le
                             moment, les méthodes store(), update() et destroy() doivent rester vide).
@@ -50,7 +53,8 @@
 
         <!-- Migrations -->
         <div id="exo6">
-            <h2>Exercice 6 : Les migrations <a href="https://laravel.com/docs/5.4/migrations" target="_blank"><i class="fa fa-book"></i></a></h2>
+            <h2>Exercice 6 : Les migrations <a href="https://laravel.com/docs/5.4/migrations" target="_blank"><i
+                        class="fa fa-book"></i></a></h2>
 
 
             <div class="alert alert-warning">
@@ -130,7 +134,8 @@ MAC_UNIX_SOCKET=/Applications/MAMP/tmp/mysql/mysql.sock
 
         <!-- Clés Etrangères -->
         <div id="exo6bis">
-            <h2>Exercice 6.1 : Clés étrangères <a href="https://laravel.com/docs/5.4/migrations#foreign-key-constraints" target="_blank"><i class="fa fa-book"></i></a></h2>
+            <h2>Exercice 6.1 : Clés étrangères <a href="https://laravel.com/docs/5.4/migrations#foreign-key-constraints"
+                                                  target="_blank"><i class="fa fa-book"></i></a></h2>
 
             <p>Tout comme en SQL, les clés étrangères permettent de lier deux tables entre elles grâce à un champ
                 commun.</p>
@@ -160,9 +165,11 @@ MAC_UNIX_SOCKET=/Applications/MAMP/tmp/mysql/mysql.sock
 
         <!-- Seeders & Factories -->
         <div id="exo6ter">
-            <h2>Exercice 6.2 : Seeders & Factories <a href="https://laravel.com/docs/5.4/seeding#using-model-factories" target="_blank"><i class="fa fa-book"></i></a></h2>
+            <h2>Exercice 6.2 : Seeders & Factories <a href="https://laravel.com/docs/5.4/seeding#using-model-factories"
+                                                      target="_blank"><i class="fa fa-book"></i></a></h2>
 
-            <p>Vous allez maintenant devoir remplir vos tables avec du contenu, et c'est à cela que servent les Seeders et
+            <p>Vous allez maintenant devoir remplir vos tables avec du contenu, et c'est à cela que servent les Seeders
+                et
                 les Model Factories.</p>
 
             <div class="panel panel-primary">
@@ -171,6 +178,10 @@ MAC_UNIX_SOCKET=/Applications/MAMP/tmp/mysql/mysql.sock
                 </div>
                 <div class="panel-body">
                     <ul>
+                        <li>À l'aide de la ligne de commande, créez un model <strong>Article</strong> et renseignez les
+                            champs <strong>$fillable</strong> dans un array protected.
+                        </li>
+                        <br>
                         <li>Dans le fichier database/factories/ModelFactory.php, dupliquez le code existant et
                             adaptez-le à votre table articles.
                         </li>
@@ -180,6 +191,10 @@ MAC_UNIX_SOCKET=/Applications/MAMP/tmp/mysql/mysql.sock
                             <a href="https://github.com/fzaninotto/Faker">
                                 le repository du package</a>.
                         </li>
+
+                        <br>
+
+                        <li>Générez le fichier UsersTableSeeder, puis ArticlesTableSeeder en ligne de commande.</li>
 
                         <br>
 
@@ -241,7 +256,8 @@ MAC_UNIX_SOCKET=/Applications/MAMP/tmp/mysql/mysql.sock
 
                         <br>
 
-                        <li>Créez une page profil <strong>/user</strong> de l'utilisateur connecté où seront listés son nom, son e-mail et sa
+                        <li>Créez une page profil <strong>/user</strong> de l'utilisateur connecté où seront listés son
+                            nom, son e-mail et sa
                             date d'inscription.
                         </li>
                     </ul>
