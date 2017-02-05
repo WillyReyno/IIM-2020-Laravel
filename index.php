@@ -263,11 +263,12 @@ return view('mavue', compact('ecole');
                 </div>
                 <div class="panel-body">
                     <ul>
+                        <li>Supprimez toutes vos vues sauf welcome.blade.php</li>
+                        <li>Supprimez toutes vos routes sauf / qui retourne la vue welcome.</li>
+                        <br>
                         <li><strong>Générez votre système d'authentification</strong> à l'aide de la commande prévue à
                             cet effet. <a href="https://laravel.com/docs/5.4/authentication" target="_blank"><i class="fa fa-book"></i></a>
                         </li>
-                        <br>
-                        <li>Vous pouvez maintenant supprimer votre fichier layout-test.php.</li>
                         <br>
                         <li>Dans un dossier <strong>resources/articles</strong> créez les fichiers suivants :
                         </li>
