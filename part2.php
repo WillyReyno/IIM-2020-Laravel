@@ -22,7 +22,7 @@
                 </div>
                 <div class="panel-body">
                     <ul>
-                        <li>A l'aide d'une ligne de commande, crééz un <strong>ArticleController</strong>
+                        <li>A l'aide d'une ligne de commande, créez un <strong>ArticleController</strong>
                             qui sera prérempli avec les méthodes : <strong>index</strong>, <strong>create</strong>,
                             <strong>store</strong>,
                             <strong>show</strong>, <strong>edit</strong>, <strong>update</strong> et
@@ -206,7 +206,7 @@ MAC_UNIX_SOCKET=/Applications/MAMP/tmp/mysql/mysql.sock
         <div id="auth">
             <h2>Authentification</h2>
 
-            <p>Maintenant que vos tables sont bien migrées et seedées, vous allez pouvoir vous inscrire sur votre site
+            <p>Maintenant que vos tables ont été migrées et seedées, vous allez pouvoir vous inscrire sur votre site
                 à l'aide du système d'authentification créé dans l'exercice 4.1 !</p>
 
             <p>Une fois connecté, vous aurez accès à de nouvelles fonctions vous permettant de tester si oui ou non

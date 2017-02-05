@@ -16,7 +16,7 @@
 
             <!-- TODO Intro -->
 
-            <p>Au cours de cette vingtaine d'exercices vous apprendrez à créer un blog avec Laravel de A à Z
+            <p>Au cours de cette vingtaine d'exercices, vous apprendrez à créer un blog avec Laravel de A à Z
                 (publication et affichage d'articles, édition, suppression...).</p>
 
             <div class="alert alert-info">Afin de vous aider nous avons ajouté des liens vers la <a
@@ -29,7 +29,7 @@
 
             <p>Ces exercices sont découpés en 4 parties qui correspondent aux 4 parties du CM que votre intervenant fera
                 avec vous.<br>
-                Ne commencez donc pas les exercices de la partie 2 sans avoir eu la 2ème partie du CM !</p>
+                Ne commencez donc pas les exercices de la partie 2 sans avoir eu la 2e partie du CM !</p>
 
             <p>Si vous êtes bloqués, n'hésitez pas à demander à vos camarades, à consulter la documentation, ou à
                 demander à votre intervenant.</p>
@@ -44,7 +44,7 @@
 
             <p>Afin de pouvoir naviguer sur votre site, vous allez devoir définir des <strong>routes</strong> qui feront
                 office de lien vers vos pages.
-                Une route se défini avec un chemin (ex : <em>/accueil</em>, <em>/a-propos</em>, etc.)
+                Une route se définit avec un chemin (ex : <em>/accueil</em>, <em>/a-propos</em>, etc.)
                 et est toujours liée à une fonction ou une méthode de Controller (que nous verrons plus tard).</p>
 
             <blockquote>
@@ -150,7 +150,7 @@ return view('mavue', compact('ecole');
 
                         <br>
 
-                        <li>Liez votre seconde route à un autre fichier blade.php que vous créérez, et <strong>affichez
+                        <li>Liez votre seconde route à un autre fichier blade.php que vous créerez, et <strong>affichez
                                 le paramètre de la route dans ce fichier</strong>.
                         </li>
                     </ul>
@@ -164,7 +164,7 @@ return view('mavue', compact('ecole');
 
             <p>En PHP vous êtes habitués à utiliser des logiques conditionnelles (if, else, elseif) ou encore des
                 boucles (while, for, foreach).</p>
-            Dans Blade ces logiques sont également présentes mais ne s'écrivent pas tout à fait de la même manière.
+            Dans Blade ces logiques sont également présentes, mais ne s'écrivent pas tout à fait de la même manière.
             <a href="https://laravel.com/docs/5.4/blade#control-structures" target="_blank"><i
                     class="fa fa-book"></i></a>
 

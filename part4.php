@@ -194,8 +194,8 @@
 
                             <br>
 
-                            <li>Ce champs nous permettra également de faire apparaître certains éléments uniquement aux
-                                admin (ex : bouton de suppression, de modification...)
+                            <li>Ce champ nous permettra également de faire apparaître certains éléments uniquement aux
+                                administrateurs (ex : bouton de suppression, de modification...)
                             </li>
                         </ul>
                     </ul>
