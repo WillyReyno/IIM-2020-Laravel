@@ -14,8 +14,6 @@
         <div id="intro">
             <h2>Introduction</h2>
 
-            <!-- TODO Intro -->
-
             <p>Au cours de cette vingtaine d'exercices, vous apprendrez à créer un blog avec Laravel de A à Z
                 (publication et affichage d'articles, édition, suppression...).</p>
 
@@ -45,7 +43,7 @@
             <p>Afin de pouvoir naviguer sur votre site, vous allez devoir définir des <strong>routes</strong> qui feront
                 office de lien vers vos pages.
                 Une route se définit avec un chemin (ex : <em>/accueil</em>, <em>/a-propos</em>, etc.)
-                et est toujours liée à une fonction ou une méthode de Controller (que nous verrons plus tard).</p>
+                et est toujours liée à une méthode de Controller ou à une fonction.</p>
 
             <blockquote>
                 Dans Laravel 5.4, les routes se définissent dans le fichier <strong>/routes/web.php</strong>
@@ -60,8 +58,8 @@ Route::get('/helloworld', function() {
             </code>
         </pre>
 
-            <p><em>Cette route nous indique qu'en faisant une requête http "get" sur l'url <strong>/helloworld</strong>,
-                    cela nous retournera <strong>"Hello World"</strong>.</em></p>
+            <p><em>Cette route indique qu'en faisant une requête http "get" sur l'url <strong>/helloworld</strong>,
+                    cela retournera <strong>"Hello World"</strong>.</em></p>
 
 
             <p>Il est également possible de passer des paramètres <a
@@ -111,11 +109,11 @@ Route::get('/helloworld', function() {
             </code>
         </pre>
 
-            <p>Pour lier une route à une vue, il suffit de retourner la méthode <strong>view()</strong> <a
+            <p>Pour lier une route à une vue, il suffit de retourner la fonction <strong>view()</strong> <a
                     href="https://laravel.com/docs/5.4/helpers#method-view" target="_blank"><i
                         class="fa fa-book"></i></a> en prenant en paramètre le nom
                 du fichier blade (sans .blade.php).<br>
-                Cette méthode va automatiquement chercher un fichier dans le répertoire de nos vues, <strong>/resources/views</strong>.
+                Cette fonction va automatiquement chercher un fichier dans le répertoire de nos vues, <strong>/resources/views</strong>.
             </p>
             <pre>
             <code class="language-php">
@@ -127,13 +125,13 @@ return view('users.index');
             </code>
         </pre>
 
-            <p>Si vous souhaitez passer une variable à votre vue, il suffit d'utiliser la méthode compact (attention à
+            <p>Si vous souhaitez passer une variable à votre vue, il suffit d'utiliser la fonction compact (attention à
                 ne pas mettre le $ dans compact) :</p>
             <pre>
             <code class="language-php">
 $ecole = 'iim';
 
-// La méthode compact permet d'envoyer une variable à votre vue afin de la traiter ou de l'afficher.
+// La fonction compact permet d'envoyer une variable à votre vue afin de la traiter ou de l'afficher.
 return view('mavue', compact('ecole');
             </code>
         </pre>
@@ -208,8 +206,6 @@ return view('mavue', compact('ecole');
 
             <h2>Exercice 4 : Blade Templating</h2>
 
-            <!-- TODO Faire un rappel de tous les @ de Blade ? -->
-
             <p>Allons un peu plus loin avec Blade et créons de vrais templates afin d'optimiser nos pages</p>
 
             <pre>
@@ -226,8 +222,6 @@ return view('mavue', compact('ecole');
 &lt;/html>
             </code>
         </pre>
-
-            <!-- TODO Lier un fichier CSS ? -->
 
             <div class="panel panel-primary">
                 <div class="panel-heading">
@@ -261,7 +255,7 @@ return view('mavue', compact('ecole');
         <div id="exo4bis">
             <h2>Exercice 4.1 : Un template un peu plus complet ! </h2>
 
-            <p>Nous allons maintenant préparer nos templates pour la suite des exercices.</p>
+            <p>Vous allez maintenant préparer vos templates pour la suite des exercices.</p>
 
             <div class="panel panel-primary">
                 <div class="panel-heading">

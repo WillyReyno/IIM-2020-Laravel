@@ -30,7 +30,7 @@
                             Veillez à ce que les name de ces inputs correspondent aux noms que vous leur avez donné en
                             BDD pour simplifier la tâche.
                             <ul>
-                                <li>Le formulaire doit cibler la méthode store de votre ArticleController</li>
+                                <li>Le formulaire doit cibler la méthode store() de votre ArticleController</li>
                                 <li>Ajoutez bien le <strong>csrf_field()</strong> pour vous protéger des attaques CSRF.
                                 </li>
                             </ul>
@@ -177,7 +177,7 @@
                 </div>
                 <div class="panel-body">
                     <ul>
-                        <li>Appliquez le middleware auth sur les méthodes update/edit/create/store/delete Pour limiter
+                        <li>Appliquez le middleware auth sur les méthodes update(), edit(), create(), store() et delete() pour limiter
                             la publication, l'édition et la suppression d'articles aux utilisateurs connectés
                             uniquement.
                         </li>
@@ -194,7 +194,7 @@
 
                             <br>
 
-                            <li>Ce champ nous permettra également de faire apparaître certains éléments uniquement aux
+                            <li>Ce champ permettra également de faire apparaître certains éléments uniquement aux
                                 administrateurs (ex : bouton de suppression, de modification...)
                             </li>
                         </ul>

@@ -13,7 +13,7 @@
         <div id="exo5">
             <h2>Exercice 5 : Resource Controllers </h2>
 
-            <p>Nous allons maintenant créer une controller qui permettra de lier les routes avec les vues tout en
+            <p>Vous allez maintenant créer une controller qui permettra de lier les routes avec les vues tout en
                 passant des données si cela est nécessaire.</p>
 
             <div class="panel panel-primary">
@@ -23,18 +23,18 @@
                 <div class="panel-body">
                     <ul>
                         <li>A l'aide d'une ligne de commande, créez un <strong>ArticleController</strong>
-                            qui sera prérempli avec les méthodes : <strong>index</strong>, <strong>create</strong>,
-                            <strong>store</strong>,
-                            <strong>show</strong>, <strong>edit</strong>, <strong>update</strong> et
-                            <strong>destroy</strong>.
+                            qui sera prérempli avec les méthodes : <strong>index()</strong>, <strong>create()</strong>,
+                            <strong>store()</strong>,
+                            <strong>show()</strong>, <strong>edit()</strong>, <strong>update()</strong> et
+                            <strong>destroy()</strong>.
                         </li>
 
                         <br>
 
-                        <li>Reliez les méthodes <strong>index</strong>, <strong>create</strong>, <strong>show</strong>
+                        <li>Reliez les méthodes <strong>index()</strong>, <strong>create()</strong>, <strong>show()</strong>
                             et
-                            <strong>edit</strong> aux vues que vous avez créées dans les exercices précédents (pour le
-                            moment, les méthodes store, update et destroy doivent rester vide).
+                            <strong>edit()</strong> aux vues que vous avez créées dans les exercices précédents (pour le
+                            moment, les méthodes store(), update() et destroy() doivent rester vide).
                         </li>
 
                         <br>
@@ -77,14 +77,11 @@ MAC_UNIX_SOCKET=/Applications/MAMP/tmp/mysql/mysql.sock
                 </code>
             </pre>
 
-            <!-- TODO faire une liste migrate, refresh, reset etc ? (sauf si c'est dans le cours) -->
-
             <div class="alert alert-warning">
                 Si vous possédez une version de MySQL inférieure à la 5.77 vous obtiendrez une erreur lors de vos
                 migrations.
 
-                Pour la corriger, il suffit d'ajouter cette ligne dans la fonction boot() du
-                fichier
+                Pour la corriger, il suffit d'ajouter cette ligne dans la méthode boot() du fichier
                 <strong>app/Providers/AppServiceProvider.php</strong> <br>(et n'oubliez pas d'importer la class Schema
                 (alt + click sur
                 Schema))
@@ -186,7 +183,7 @@ MAC_UNIX_SOCKET=/Applications/MAMP/tmp/mysql/mysql.sock
 
                         <br>
 
-                        <li>Dans votre fichier ArticlesTableSeeder faites appel à la méthode <strong>factory()</strong>
+                        <li>Dans votre fichier ArticlesTableSeeder faites appel à la fonction <strong>factory()</strong>
                             en lui passant en paramètre le namespace de votre modèle ainsi que le nombre d'itérations
                             voulues.
                         </li>
